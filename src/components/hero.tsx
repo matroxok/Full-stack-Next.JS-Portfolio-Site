@@ -1,3 +1,5 @@
+import { ContactButton } from './ui/moving-border'
+
 export default function Hero() {
 	return (
 		<div className="flex justify-around mt-32">
@@ -14,6 +16,9 @@ export default function Hero() {
 					tempora soluta, nulla distinctio ratione animi officiis eveniet et earum, saepe vero dolore reiciendis
 					laboriosam placeat explicabo sint?
 				</h2>
+				<ContactButton borderRadius="1.75rem" className="bg-none text-white border-blue-500 font-bold">
+					Contact
+				</ContactButton>
 			</div>
 			<div></div>
 		</div>
