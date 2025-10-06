@@ -82,7 +82,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 				boxShadow: visible
 					? '0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset'
 					: 'none',
-				width: visible ? '40%' : '100%',
+				width: visible ? '80%' : '100%',
 				y: visible ? 20 : 0,
 			}}
 			transition={{
@@ -94,8 +94,8 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 				minWidth: '800px',
 			}}
 			className={cn(
-				'relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent',
-				visible && 'bg-white dark:bg-neutral-950/80',
+				'relative z-[60] mx-auto hidden w-full flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent',
+				visible && 'bg-gray-900/30 dark:bg-neutral-950/80',
 				className
 			)}>
 			{children}
@@ -154,7 +154,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
 			}}
 			className={cn(
 				'relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden',
-				visible && 'bg-white/80 dark:bg-neutral-950/80',
+				visible && 'bg-gray-900/30 dark:bg-neutral-950/80',
 				className
 			)}>
 			{children}
@@ -166,7 +166,7 @@ export const MobileNavHeader = ({ children, className }: MobileNavHeaderProps) =
 	return <div className={cn('flex w-full flex-row items-center justify-between', className)}>{children}</div>
 }
 
-export const MobileNavMenu = ({ children, className, isOpen, onClose }: MobileNavMenuProps) => {
+export const MobileNavMenu = ({ children, className, isOpen }: MobileNavMenuProps) => {
 	return (
 		<AnimatePresence>
 			{isOpen && (
@@ -195,8 +195,8 @@ export const MobileNavToggle = ({ isOpen, onClick }: { isOpen: boolean; onClick:
 
 export const NavbarLogo = () => {
 	return (
-		<a href="#" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
-			<Image src="/logo.svg" alt="logo" width={160} height={160} />
+		<a href="#" className="relative z-20 mr-4 flex items-center space-x-2 text-sm font-normal text-black">
+			<Image src="/logo.svg" alt="logo" width={200} height={200} />
 		</a>
 	)
 }

@@ -5,11 +5,12 @@ export default function Home() {
 	return (
 		<>
 			<div className="text-white">
-				<nav className="sticky mt-5 top-0">
+				<nav className="sticky mt-5 top-0 z-[100]">
 					<Nav></Nav>
 				</nav>
 				<main className="container mx-auto">
 					<Hero></Hero>
+					<div className="h-[100vh]"></div>
 				</main>
 				<footer></footer>
 			</div>
