@@ -1,4 +1,5 @@
 import { ContactButton } from './ui/moving-border'
+import { Safari } from './ui/safari'
 
 export const CvButton = () => {
 	return (
@@ -8,6 +9,14 @@ export const CvButton = () => {
 			className="text-lg bg-green-400 text-white border-none font-bold cursor-pointer">
 			My CV
 		</ContactButton>
+	)
+}
+
+export const SafariButton = () => {
+	return (
+		<div className="relative">
+			<Safari url="magicui.design" className="size-full" src="/assets/hero_mk_photo.svg" />
+		</div>
 	)
 }
 
@@ -36,7 +45,10 @@ export default function Hero() {
 					</ContactButton>
 				</div>
 			</div>
-			<div></div>
+
+			<div>
+				<SafariButton />
+			</div>
 		</div>
 	)
 }
