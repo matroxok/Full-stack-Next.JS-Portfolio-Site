@@ -1,4 +1,5 @@
 import { Nav } from '@/components/navbar'
+import Hero from '@/components/hero'
 
 export default function Home() {
 	return (
@@ -7,7 +8,9 @@ export default function Home() {
 				<nav className="sticky mt-5 top-0">
 					<Nav></Nav>
 				</nav>
-				<main className="container mx-auto"></main>
+				<main className="container mx-auto">
+					<Hero></Hero>
+				</main>
 				<footer></footer>
 			</div>
 		</>

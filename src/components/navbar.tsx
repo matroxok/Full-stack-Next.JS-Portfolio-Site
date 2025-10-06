@@ -1,4 +1,5 @@
 'use client'
+
 import {
 	Navbar,
 	NavBody,
@@ -11,6 +12,7 @@ import {
 	MobileNavMenu,
 } from '@/components/ui/resizable-navbar'
 import { useState } from 'react'
+import Image from 'next/image'
 
 export function Nav() {
 	const navItems = [
@@ -36,9 +38,12 @@ export function Nav() {
 				{/* Desktop Navigation */}
 				<NavBody>
 					<NavbarLogo />
-					<NavItems items={navItems} />
+					<NavItems className="text-lg" items={navItems} />
 					<div className="flex items-center gap-4">
-						<NavbarButton variant="gradient" className="bg-[#171717] text-white">
+						<NavbarButton
+							variant="dark"
+							className="bg-[#171717] text-white flex items-center justify-center gap-2 hover:bg-[#374151]">
+							<Image src="/message-dollar.svg" alt="" width={20} height={20}></Image>
 							Contact
 						</NavbarButton>
 					</div>

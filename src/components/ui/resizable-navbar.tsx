@@ -196,7 +196,7 @@ export const MobileNavToggle = ({ isOpen, onClick }: { isOpen: boolean; onClick:
 export const NavbarLogo = () => {
 	return (
 		<a href="#" className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
-			<Image src="/logo.svg" alt="logo" width={120} height={120} />
+			<Image src="/logo.svg" alt="logo" width={160} height={160} />
 		</a>
 	)
 }
