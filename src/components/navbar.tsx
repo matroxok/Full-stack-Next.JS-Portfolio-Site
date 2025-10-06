@@ -33,7 +33,7 @@ export function Nav() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
 	return (
-		<div className="relative xl:px-48 w-full">
+		<div className="relative xl:px-32 w-full">
 			<Navbar>
 				{/* Desktop Navigation */}
 				<NavBody>
