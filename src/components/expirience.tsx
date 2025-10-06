@@ -1,4 +1,5 @@
 import { Martian_Mono } from 'next/font/google'
+import { SparklesText } from './ui/sparkles-text'
 
 const martianMono = Martian_Mono({
 	subsets: ['latin'],
@@ -26,15 +27,19 @@ export default function Expirience() {
 							</h3>
 						</div>
 					</div>
-					<div className="flex flex-col justify-start items-start max-w-4xl gap-4">
-						<h3 className="text-2xl font-bold text-center mb-10">Expirience</h3>
-						<p>
+					<div className="flex flex-col justify-start items-start max-w-4xl gap-4 py-16">
+						<SparklesText>Expirience</SparklesText>
+						{/* <h3 className="text-3xl font-bold text-center">Expirience</h3> */}
+						<p className="font-light">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis voluptate nostrum perspiciatis
 							voluptatem, voluptatum eos sed vitae illo eligendi ut, exercitationem consequatur ex iure repudiandae,
 							magnam dolor eum minima a ipsum aut molestias. Necessitatibus cumque sed soluta, id animi et mollitia
 							commodi eveniet exercitationem rerum nihil quod libero autem dignissimos, explicabo inventore aperiam
 							laudantium natus? Quod veniam magni nemo error. Facere voluptate suscipit quia!
 						</p>
+						<div className="w-full flex justify-center itens-center mt-10">
+							<LinkedinButton />
+						</div>
 					</div>
 				</div>
 			</div>
