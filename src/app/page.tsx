@@ -1,6 +1,9 @@
 import { Nav } from '@/components/navbar'
 import Hero from '@/components/hero'
 import About from '@/components/about'
+import Expirience from '@/components/expirience'
+
+import Image from 'next/image'
 
 export default function Home() {
 	return (
@@ -12,7 +15,9 @@ export default function Home() {
 				<main className="">
 					<Hero></Hero>
 					<About></About>
-					{/* <div className="h-[100vh]"></div> */}
+					<div className="w-full border-t border-dotted border-[#D4D4D4]"></div>
+					<Expirience></Expirience>
+					<div className="h-[100vh]"></div>
 				</main>
 				<footer></footer>
 			</div>
