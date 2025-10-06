@@ -26,7 +26,7 @@ const Sparkle: React.FC<Sparkle> = ({ id, x, y, color, delay, scale }) => {
 				scale: [0, scale, 0],
 				rotate: [75, 120, 150],
 			}}
-			transition={{ duration: 0.8, repeat: Infinity, delay }}
+			transition={{ duration: 2, repeat: Infinity, delay }}
 			width="21"
 			height="21"
 			viewBox="0 0 21 21">
@@ -85,9 +85,9 @@ interface SparklesTextProps {
 
 export const SparklesText: React.FC<SparklesTextProps> = ({
 	children,
-	colors = { first: '#9E7AFF', second: '#FE8BBB' },
+	colors = { first: '#4ade80', second: '#0284c7' },
 	className,
-	sparklesCount = 10,
+	sparklesCount = 8,
 	...props
 }) => {
 	const [sparkles, setSparkles] = useState<Sparkle[]>([])
