@@ -5,16 +5,24 @@ const martianMono = Martian_Mono({
 	weight: ['400', '700'],
 })
 
+export const LinkedinButton = () => {
+	return (
+		<a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+			<button className="bg-blue-500 text-white py-2 px-4 rounded">LinkedIn</button>
+		</a>
+	)
+}
+
 export default function Expirience() {
 	return (
 		<div className="w-full h-auto bg-[#171717]">
 			<div className="container mx-auto py-16">
 				<div className="flex flex-col">
 					<div className="flex justify-end">
-						<div className={`${martianMono.className} flex flex-col`}>
+						<div className={`${martianMono.className} flex flex-col items-end`}>
 							<p className="font-extralight text-sm italic">cd home/dev/matrox_dev</p>
 							<h3 className="font-regular text-2xl">
-								return (<span className="text-green-400">AboutMe</span>)
+								return (<span className="text-green-400">Skills & Expirience</span>)
 							</h3>
 						</div>
 					</div>
