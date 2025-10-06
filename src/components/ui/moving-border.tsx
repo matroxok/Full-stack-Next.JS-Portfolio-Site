@@ -26,7 +26,10 @@ export function ContactButton({
 }) {
 	return (
 		<Component
-			className={cn('relative h-16 w-40 overflow-hidden bg-transparent p-[1px] text-xl', containerClassName)}
+			className={cn(
+				'relative h-16 w-40 overflow-hidden bg-transparent p-[1px] text-xl hover:scale-105 transition-all duration-300',
+				containerClassName
+			)}
 			style={{
 				borderRadius: borderRadius,
 			}}

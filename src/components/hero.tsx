@@ -5,7 +5,7 @@ export default function Hero() {
 		<div className="flex justify-around mt-32">
 			<div className="flex flex-col gap-6">
 				<p className="font-semibold">
-					Hi, I'm Mateusz <br /> <span className="uppercase font-normal">web developer & ui/ux designer</span>
+					Hi, I&apos;m Mateusz <br /> <span className="uppercase font-normal">web developer & ui/ux designer</span>
 				</p>
 				<h1 className="flex flex-col gap-1 text-3xl font-bold text-">
 					Your idea, My execution, <br />
@@ -16,7 +16,7 @@ export default function Hero() {
 					tempora soluta, nulla distinctio ratione animi officiis eveniet et earum, saepe vero dolore reiciendis
 					laboriosam placeat explicabo sint?
 				</h2>
-				<ContactButton borderRadius="1.75rem" className="bg-none text-white border-blue-500 font-bold">
+				<ContactButton borderRadius="1rem" className="bg-none text-white border-blue-500 font-bold cursor-pointer">
 					Contact
 				</ContactButton>
 			</div>
