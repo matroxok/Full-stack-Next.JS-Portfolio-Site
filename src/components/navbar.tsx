@@ -25,6 +25,10 @@ export function Nav() {
 			link: '#login',
 		},
 		{
+			name: 'Expirience',
+			link: '#expirience',
+		},
+		{
 			name: 'Portfolio',
 			link: '#contact',
 		},
@@ -33,7 +37,7 @@ export function Nav() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
 	return (
-		<div className="relative xl:px-32 w-full">
+		<div className="relative xl:px-42 w-full">
 			<Navbar>
 				{/* Desktop Navigation */}
 				<NavBody>
