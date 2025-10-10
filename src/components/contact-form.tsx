@@ -1,4 +1,5 @@
 import { Martian_Mono } from 'next/font/google'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 const martianMono = Martian_Mono({
 	subsets: ['latin'],
@@ -20,8 +21,18 @@ export default function ContactForm() {
 						</h3>
 					</div>
 				</div>
-				<div className="flex flex-col justify-center items-center w-auto h-auto p-10 border-dashed border-3 border-[#161616]">
-					<p className="uppercase font-bold text-4xl">be in contact</p>
+				<div className="flex flex-col justify-center items-center gap-10 w-auto h-auto p-10 border-dashed border-3 border-[#161616]">
+					<p className="uppercase font-bold text-4xl">stay in touch</p>
+					<div className="w-auto h-auto flex justify-center items-center gap-6">
+						<Avatar>
+							<AvatarImage src="/assets/contact_avatar.svg" />
+							<AvatarFallback>CN</AvatarFallback>
+						</Avatar>
+						<p className="text-center font-light border-2 rounded-lg border-[#5A5A5A] p-4">
+							Need help? Use the form below or email me at <br />
+							<span className="font-semibold">mateusz@matrox.dev</span>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
