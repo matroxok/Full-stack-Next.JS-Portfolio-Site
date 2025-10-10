@@ -14,6 +14,7 @@
     "@mui/icons-material": "^7.3.4",
     "@mui/material": "^7.3.4",
     "@prisma/client": "^6.17.0",
+    "@radix-ui/react-avatar": "^1.1.10",
     "@tabler/icons-react": "^3.32.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
