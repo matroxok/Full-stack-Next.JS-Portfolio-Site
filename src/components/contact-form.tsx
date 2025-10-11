@@ -1,6 +1,11 @@
 import { Martian_Mono } from 'next/font/google'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { contactSchema, type contactInput } from '@/app/contact/schema'
+import { useTransition, useState } from 'react'
+
 const martianMono = Martian_Mono({
 	subsets: ['latin'],
 	weight: ['400', '700'],
@@ -33,6 +38,21 @@ export default function ContactForm() {
 							<span className="font-semibold">mateusz@matrox.dev</span>
 						</p>
 					</div>
+					<form action="" className="flex flex-col gap-8 items-center w-full max-w-1/2">
+						<div className="w-full flex flex-col">
+							<div className="flex flex-col gap-1">
+								<label className="font-light text-sm text-[#CCC6C6]">Name</label>
+								<input
+									type="text"
+									placeholder="Your Name"
+									className="font-light text-sm border-[0.5px] border-[#8D8D8D] rounded-sm py-4 px-4 bg-[#343333]"
+								/>
+							</div>
+						</div>
+						<button type="submit" className="bg-green-400 text-black py-4 px-8 rounded-2xl cursor-pointer">
+							Send my message
+						</button>
+					</form>
 				</div>
 			</div>
 		</div>
