@@ -45,7 +45,7 @@ export default function ContactForm() {
 								<input
 									type="text"
 									placeholder="Your Name"
-									className="font-light text-sm border-[0.5px] border-[#8D8D8D] rounded-sm py-4 px-4 bg-[#343333]"
+									className="font-light text-sm border-[0.5px] border-[#8D8D8D] rounded-sm py-4 px-4 bg-[#343333] active:border-blue-400/20 transition-colors duration-200 active:outline-0"
 								/>
 							</div>
 						</div>
