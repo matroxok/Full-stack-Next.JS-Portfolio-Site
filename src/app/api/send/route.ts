@@ -7,9 +7,9 @@ export const runtime = 'nodejs'
 const resend = new Resend(required('RESEND_API_KEY'))
 
 function required(name: string) {
-	const v = process.env[name]
-	if (!v) throw new Error(`Missing env var: ${name}`)
-	return v
+	const env = process.env[name]
+	if (!env) throw new Error(`Missing env file: ${name}`)
+	return env
 }
 
 const FROM_EMAIL = required('EMAIL_FROM')
@@ -29,16 +29,18 @@ export async function POST(req: NextRequest) {
 		const toYou = await resend.emails.send({
 			from: FROM,
 			to: OWNER_EMAIL,
-			subject: `Nowe zgłoszenie od ${name ?? 'bez imienia'}`,
+			subject: `Nowe zgłoszenie od ${name ?? 'brak nadawcy'}`,
 			html: `<p><b>Email:</b> ${email}</p><p>${message}</p>`,
+			// tba react email teamplate
 		})
 
 		// client confirmation
 		const toClient = await resend.emails.send({
 			from: FROM,
 			to: email,
-			subject: 'Dziękujemy za wiadomość',
-			html: `<p>Cześć ${name ?? ''} — mamy Twoją wiadomość, odezwiemy się wkrótce.</p>`,
+			subject: 'Thanks for your message!',
+			html: `<p>Hello, ${name ?? ''} — your message has been successfully sent! I will get back to you soon.</p>`,
+			// tba react email teamplate
 		})
 
 		return NextResponse.json({ ok: true, toYou, toClient })
