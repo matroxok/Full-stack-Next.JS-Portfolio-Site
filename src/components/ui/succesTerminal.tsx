@@ -14,7 +14,7 @@ export default function TerminalWindow({ onClose }: TerminalWindowProps) {
                    rounded-2xl border border-white/10 bg-neutral-900/40
                    shadow-2xl ring-1 ring-white/10 flex flex-col gap-6 
                    p-4 sm:p-6 max-h-[80svh] md:max-h-[80vh]">
-				{/* MOBILE: prosty modal potwierdzenia */}
+				{/* MOBILE */}
 				<div className="block md:hidden">
 					<div className="flex flex-col items-center text-center gap-3 px-1">
 						<div className="text-4xl">✉️</div>
@@ -34,7 +34,7 @@ export default function TerminalWindow({ onClose }: TerminalWindowProps) {
 					</div>
 				</div>
 
-				{/* DESKTOP: terminal */}
+				{/* DESKTOP */}
 				<div className="hidden md:block">
 					<div
 						className="max-h-[60svh] md:max-h-[65vh] overflow-y-auto
