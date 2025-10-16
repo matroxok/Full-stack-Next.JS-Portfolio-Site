@@ -78,7 +78,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 						</Avatar>
 						<p className="text-center font-light border-2 rounded-lg border-[#5A5A5A] p-4">
 							Need help? Use the form below or email me at <br />
-							<span className="font-semibold">mateusz@matrox.dev</span>
+							<span className="font-semibold">mateusz.kozera@matrox.dev</span>
 						</p>
 					</div>
 
@@ -139,7 +139,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 							type="submit"
 							disabled={pending}
 							className="bg-green-400 text-black py-4 px-8 rounded-2xl cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed">
-							{pending ? 'Sending…' : 'Send my message'}
+							{pending ? 'Sending…' : 'Send message'}
 						</button>
 						{status && <p className={`text-sm ${status.ok ? 'text-green-400' : 'text-red-400'}`}>{status.msg}</p>}
 					</form>
