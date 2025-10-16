@@ -1,4 +1,3 @@
-// src/app/api/send/route.ts
 import { NextResponse, NextRequest } from 'next/server'
 import { Resend } from 'resend'
 
@@ -7,9 +6,9 @@ export const runtime = 'nodejs'
 const resend = new Resend(required('RESEND_API_KEY'))
 
 function required(name: string) {
-	const env = process.env[name]
-	if (!env) throw new Error(`Missing env file: ${name}`)
-	return env
+	const v = process.env[name]
+	if (!v) throw new Error(`Missing env file: ${name}`)
+	return v
 }
 
 const FROM_EMAIL = required('EMAIL_FROM')

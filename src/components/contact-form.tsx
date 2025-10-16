@@ -49,6 +49,25 @@ export default function ContactForm() {
 								/>
 							</div>
 						</div>
+						<div className="w-full flex flex-col">
+							<div className="flex flex-col gap-1">
+								<label className="font-light text-sm text-[#CCC6C6]">Email</label>
+								<input
+									type="text"
+									placeholder="Your Name"
+									className="font-light text-sm border-[0.5px] border-[#8D8D8D] rounded-sm py-4 px-4 bg-[#343333] active:border-blue-400/20 transition-colors duration-200 active:outline-0"
+								/>
+							</div>
+						</div>
+						<div className="w-full flex flex-col">
+							<div className="flex flex-col gap-1">
+								<label className="font-light text-sm text-[#CCC6C6]">Message</label>
+								<textarea
+									placeholder="Your message..."
+									className="w-full min-h-44 resize-none text-start font-light text-sm border-[0.5px] border-[#8D8D8D] rounded-sm py-3 px-4 bg-[#343333] outline-none focus:border-blue-400/40 transition-colors duration-200 leading-relaxed placeholder:text-[#8D8D8D]"
+								/>
+							</div>
+						</div>
 						<button type="submit" className="bg-green-400 text-black py-4 px-8 rounded-2xl cursor-pointer">
 							Send my message
 						</button>
