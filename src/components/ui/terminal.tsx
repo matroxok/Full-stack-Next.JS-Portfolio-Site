@@ -195,8 +195,11 @@ export const Terminal = ({ children, className, sequence = true, startOnView = t
 	const content = (
 		<div
 			ref={containerRef}
-			className={cn('border-border bg-background z-0 h-full max-h-[800px] w-full rounded-xl border', className)}>
-			<div className="border-border flex flex-col gap-y-2 border-b p-4">
+			className={cn(
+				'border-border border-none bg-background z-0 h-full max-h-[800px] w-full rounded-xl border',
+				className
+			)}>
+			<div className=" border-neutral-900 flex flex-col gap-y-2 border-b p-4">
 				<div className="flex flex-row gap-x-2">
 					<div className="h-2 w-2 rounded-full bg-red-500"></div>
 					<div className="h-2 w-2 rounded-full bg-yellow-500"></div>

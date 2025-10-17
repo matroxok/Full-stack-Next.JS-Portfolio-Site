@@ -54,7 +54,9 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 	}
 
 	return (
-		<div className="w-full h-auto bg-[linear-gradient(180deg,#0A0A0A_0%,rgba(255,255,255,0.01)_2411.5%)]">
+		<div
+			id="contact-form"
+			className="w-full h-auto bg-[linear-gradient(180deg,#0A0A0A_0%,rgba(255,255,255,0.01)_2411.5%)]">
 			<div className="container mx-auto py-16">
 				<div className="flex justify-center">
 					<div className={`${martianMono.className} flex flex-col items-center`}>

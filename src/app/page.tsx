@@ -24,7 +24,7 @@ export default function Home() {
 	return (
 		<>
 			{showTerminal && (
-				<div className="fixed inset-0 z-[1000] flex items-center justify-center backdrop-blur-sm bg-black/70 transition-opacity duration-300">
+				<div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-xs bg-black/80 transition-opacity duration-300">
 					<TerminalWindow onClose={handleCloseTerminal} />
 				</div>
 			)}
@@ -37,7 +37,7 @@ export default function Home() {
 					<About></About>
 					<div className="w-full border-t border-dotted border-[#D4D4D4]"></div>
 					<Expirience></Expirience>
-					<ContactForm onSuccess={handleSuccess}></ContactForm>
+					<ContactForm  onSuccess={handleSuccess}></ContactForm>
 					<div className="h-[100vh]"></div>
 				</main>
 				<footer></footer>

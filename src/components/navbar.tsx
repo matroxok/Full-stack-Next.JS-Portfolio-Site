@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/resizable-navbar'
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function Nav() {
 	const navItems = [
@@ -44,12 +45,13 @@ export function Nav() {
 					<NavbarLogo />
 					<NavItems className="text-lg" items={navItems} />
 					<div className="flex items-center gap-4">
-						<NavbarButton
-							variant="dark"
-							className="bg-[#171717] text-white flex items-center justify-center gap-2 hover:bg-[#374151]">
-							<Image src="/message-dollar.svg" alt="" width={20} height={20}></Image>
+						<Link
+							href="#contact-form"
+							scroll={true}
+							className="relative z-50 pointer-events-auto bg-[#171717] text-white flex items-center justify-center gap-2 hover:bg-[#374151] focus:outline-none focus:ring-0 active:outline-none no-underline rounded-md px-4 py-2 transition-colors duration-200">
+							<Image src="/message-dollar.svg" alt="" width={20} height={20} />
 							Contact
-						</NavbarButton>
+						</Link>
 					</div>
 				</NavBody>
 

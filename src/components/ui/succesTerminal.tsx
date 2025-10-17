@@ -36,11 +36,17 @@ export default function TerminalWindow({ onClose }: TerminalWindowProps) {
 
 				{/* DESKTOP */}
 				<div className="hidden md:block">
+					<div className="relative mb-4 w-fit h-fit">
+						{/* <div className="absolute top-0 right-0 w-[6px] h-[6px] rounded-full bg-red-400 animate-pulse"></div> */}
+						<p className="text-white text-lg">Notification</p>
+					</div>
 					<div
 						className="max-h-[60svh] md:max-h-[65vh] overflow-y-auto
                        [scrollbar-width:thin] [scrollbar-color:theme(colors.neutral.600)_transparent]">
-						<Terminal className="w-full text-[clamp(0.9rem,1.1vw,1rem)] leading-relaxed">
-							<TypingAnimation>&gt; matrox.dev | in progress...</TypingAnimation>
+						<Terminal className="w-full text-[clamp(0.9rem,1.1vw,1rem)] leading-relaxed bg-neutral-700">
+							<TypingAnimation className="text-white pb-2">
+								root@matrox.dev &gt; contact-form execute --send-message
+							</TypingAnimation>
 							<AnimatedSpan className="text-green-500">✔ Checking form integrity...</AnimatedSpan>
 							<AnimatedSpan className="text-green-500">✔ Validating input fields.</AnimatedSpan>
 							<AnimatedSpan className="text-green-500">✔ No validation errors detected.</AnimatedSpan>
@@ -49,10 +55,10 @@ export default function TerminalWindow({ onClose }: TerminalWindowProps) {
 							<AnimatedSpan className="text-green-500">✔ Sending message data securely via HTTPS.</AnimatedSpan>
 							<AnimatedSpan className="text-green-500">✔ Mail server acknowledged the request.</AnimatedSpan>
 							<AnimatedSpan className="text-green-500">✔ Message successfully dispatched.</AnimatedSpan>
-							<TypingAnimation className="text-muted-foreground">
-								Success! Your message has been sent ✉️
+							<TypingAnimation className="text-white pt-4 text-lg">
+								Success! Your message has been sent 🧐.
 							</TypingAnimation>
-							<TypingAnimation className="text-muted-foreground">
+							<TypingAnimation className="text-white italic">
 								You’ll receive a confirmation in your inbox shortly.
 							</TypingAnimation>
 						</Terminal>
@@ -61,8 +67,8 @@ export default function TerminalWindow({ onClose }: TerminalWindowProps) {
 					<div className="mt-6 flex items-center justify-end">
 						<button
 							onClick={onClose}
-							className="bg-green-400 hover:bg-green-800 text-black font-semibold 
-                         py-2.5 px-6 rounded-lg transition-colors duration-200 cursor-pointer">
+							className="bg-green-500 hover:bg-green-700 text-black  
+                         py-2 px-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer hover:text-white">
 							Close
 						</button>
 					</div>
