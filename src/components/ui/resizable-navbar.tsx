@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils'
 import { IconMenu2, IconX } from '@tabler/icons-react'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import React, { useRef, useState } from 'react'
 
@@ -114,7 +115,8 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
 				className
 			)}>
 			{items.map((item, idx) => (
-				<a
+				<Link
+					scroll={true}
 					onMouseEnter={() => setHovered(idx)}
 					onClick={onItemClick}
 					className="relative px-4 py-2 text-white font-bold dark:text-neutral-300"
@@ -127,7 +129,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
 						/>
 					)}
 					<span className="relative z-20">{item.name}</span>
-				</a>
+				</Link>
 			))}
 		</motion.div>
 	)

@@ -75,7 +75,7 @@ function Profile() {
 
 export default function About() {
 	return (
-		<div className="w-full h-auto bg-[#171717] mt-24">
+		<div id='about' className="w-full h-auto bg-[#171717] mt-24">
 			<div className="container mx-auto py-16">
 				<div className={`${martianMono.className} flex flex-col`}>
 					<p className="font-extralight text-sm italic">cd home/dev/matrox_dev</p>
