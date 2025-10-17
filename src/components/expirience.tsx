@@ -1,5 +1,7 @@
 import { Martian_Mono } from 'next/font/google'
 import { SparklesText } from './ui/sparkles-text'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const martianMono = Martian_Mono({
 	subsets: ['latin'],
@@ -8,9 +10,26 @@ const martianMono = Martian_Mono({
 
 export const LinkedinButton = () => {
 	return (
-		<a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-			<button className="bg-blue-500 text-white py-2 px-4 rounded">LinkedIn</button>
-		</a>
+		<Link
+			href="https://www.linkedin.com/in/mateusz-kozera-a30566313/"
+			target="_blank"
+			rel="noopener noreferrer"
+			className="group flex items-center justify-center gap-2 hover:scale-105 transition-all duration-300 border border-transparent hover:border-neutral-400 rounded-md px-4 py-2">
+			<p className="font-semibold text-lg">~</p>
+			<Image
+				src="/assets/linkedin_logo.svg"
+				alt="LinkedIn icon"
+				width={40}
+				height={40}
+				className="transition-colors duration-300 group-hover:bg-blue-500/50 rounded-md p-1"
+			/>
+			<div className="flex flex-col font-normal items-center">
+				<p>Detailed information on my</p>
+				<p className="text-blue-300 font-semibold group-hover:text-blue-500 transition-colors duration-300">
+					LinkedIn.
+				</p>
+			</div>
+		</Link>
 	)
 }
 
