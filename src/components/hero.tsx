@@ -2,6 +2,7 @@ import { ContactButton } from './ui/moving-border'
 import { Safari } from './ui/safari'
 import './hero.css'
 import { PointerHighlight } from '@/components/ui/pointer-highlight'
+import Link from 'next/link'
 
 export const CvButton = () => {
 	return (
@@ -51,7 +52,7 @@ export default function Hero() {
 					<ContactButton
 						borderRadius="10px"
 						className="text-lg bg-none text-white border-blue-500 font-regular cursor-pointer">
-						Contact
+						<Link href="#contact-form">Contact</Link>
 					</ContactButton>
 				</div>
 			</div>
