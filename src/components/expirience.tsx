@@ -36,7 +36,7 @@ export const LinkedinButton = () => {
 export default function Expirience() {
 	return (
 		<div className="w-full h-auto bg-[#171717]">
-			<div className="container mx-auto py-16">
+			<div className="container mx-auto pt-16">
 				<div className="flex flex-col">
 					<div className="flex justify-end">
 						<div className={`${martianMono.className} flex flex-col items-end`}>

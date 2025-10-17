@@ -7,6 +7,7 @@ import Hero from '@/components/hero'
 import About from '@/components/about'
 import Expirience from '@/components/expirience'
 import ContactForm from '@/components/contact-form'
+import Skills from '@/components/skills'
 
 import TerminalWindow from '@/components/ui/succesTerminal'
 
@@ -37,7 +38,8 @@ export default function Home() {
 					<About></About>
 					<div className="w-full border-t border-dotted border-[#D4D4D4]"></div>
 					<Expirience></Expirience>
-					<ContactForm  onSuccess={handleSuccess}></ContactForm>
+					<Skills></Skills>
+					<ContactForm onSuccess={handleSuccess}></ContactForm>
 					<div className="h-[100vh]"></div>
 				</main>
 				<footer></footer>
