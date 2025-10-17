@@ -58,7 +58,7 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 			id="contact-form"
 			className="w-full h-auto bg-[linear-gradient(180deg,#0A0A0A_0%,rgba(255,255,255,0.01)_2411.5%)]">
 			<div className="container mx-auto py-16">
-				<div className="flex justify-center">
+				<div className="flex justify-center pb-8 ">
 					<div className={`${martianMono.className} flex flex-col items-center`}>
 						<p className="font-extralight text-sm italic">
 							<span className="text-[#53C1DE]">export</span> function <span className="text-[#F5BD4F]">Contact</span>(){' '}
@@ -69,7 +69,6 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 						</h3>
 					</div>
 				</div>
-
 				<div className="flex flex-col justify-center items-center gap-10 w-auto h-auto p-10 border-dashed border-3 border-[#161616]">
 					<p className="uppercase font-bold text-4xl">stay in touch</p>
 
