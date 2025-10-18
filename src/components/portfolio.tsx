@@ -1,16 +1,13 @@
 import { Martian_Mono } from 'next/font/google'
-import { EvervaultCard, Icon } from './ui/evervault-card'
-// import { portfolio } from '@/lib/skills'
-
-import Link from 'next/link'
-import Image from 'next/image'
+import PortfolioCard from './ui/portfolioCard'
+import type { PortfolioItem } from '@/lib/portfolio'
 
 const martianMono = Martian_Mono({
 	subsets: ['latin'],
 	weight: ['200', '300', '400', '700'],
 })
 
-export default function Portfolio() {
+export default function Portfolio({ data }: { data: PortfolioItem[] }) {
 	return (
 		<div id="portfolio" className="w-full h-auto bg-[#171717]">
 			<div className="container mx-auto py-16">
@@ -22,15 +19,15 @@ export default function Portfolio() {
 						</h3>
 					</div>
 				</div>
-				{/* {portfolio.map(item => (
-					<div className="border border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
-						<Icon className="absolute h-6 w-6 -top-3 -left-3 text-white " />
-						<Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-white " />
-						<Icon className="absolute h-6 w-6 -top-3 -right-3 text-white " />
-						<Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white " />
-						<p></p>
-					</div>
-				))} */}
+				<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+					{data.map((group, gi) =>
+						group.items.map((item, ii) => {
+							// KLUCZ: staramy się, by był stabilny
+							const key = `${item.title}-${item.href ?? ii}-${gi}`
+							return <PortfolioCard key={key} item={item} />
+						})
+					)}
+				</div>
 			</div>
 		</div>
 	)
