@@ -1,4 +1,4 @@
-import { skills } from '@/lib/skills'
+import { skills } from '@/data/skills'
 import { Martian_Mono } from 'next/font/google'
 import Link from 'next/link'
 import { Fragment } from 'react'

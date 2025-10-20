@@ -1,6 +1,6 @@
 import { Martian_Mono } from 'next/font/google'
 import PortfolioCard from './ui/portfolioCard'
-import type { PortfolioItem } from '@/lib/portfolio'
+import type { PortfolioItem } from '@/data/portfolio'
 
 const martianMono = Martian_Mono({
 	subsets: ['latin'],
@@ -19,7 +19,7 @@ export default function Portfolio({ data }: { data: PortfolioItem[] }) {
 						</h3>
 					</div>
 				</div>
-				<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+				<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 py-16">
 					{data.map((group, gi) =>
 						group.items.map((item, ii) => {
 							// KLUCZ: staramy się, by był stabilny

@@ -9,7 +9,7 @@ import Expirience from '@/components/expirience'
 import ContactForm from '@/components/contact-form'
 import Skills from '@/components/skills'
 import Portfolio from '@/components/portfolio'
-import { portfolio } from '@/lib/portfolio'
+import { portfolio } from '@/data/portfolio'
 
 import TerminalWindow from '@/components/ui/succesTerminal'
 

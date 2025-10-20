@@ -1,5 +1,5 @@
 export interface PortfolioItem {
-	items: { tech: string; title: string; secondtitle?: string; description: string; image: string; href?: string }[]
+	items: { tech?: string; title: string; secondtitle?: string; description?: string; image?: string; href?: string }[]
 }
 
 export const portfolio: PortfolioItem[] = [
@@ -28,10 +28,11 @@ export const portfolio: PortfolioItem[] = [
 	{
 		items: [
 			{
-				tech: 'soon',
+				// tech: 'soon',
 				title: 'soon',
-				description: 'soon',
+				// description: 'soon',
 				image: '/assets/projects/matrox_dev_in_progress.png',
+				// href: 'null',
 			},
 		],
 	},
