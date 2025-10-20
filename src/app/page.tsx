@@ -43,7 +43,7 @@ export default function Home() {
 					<Skills></Skills>
 					<Portfolio data={portfolio}></Portfolio>
 					<ContactForm onSuccess={handleSuccess}></ContactForm>
-					<div className="h-[100vh]"></div>
+					{/* <div className="h-[100vh]"></div> */}
 				</main>
 				<footer></footer>
 			</div>
