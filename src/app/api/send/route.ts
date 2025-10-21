@@ -14,7 +14,7 @@ function required(name: string) {
 }
 
 const FROM_EMAIL = required('EMAIL_FROM')
-const FROM_NAME = process.env.EMAIL_NAME ?? 'Twoja Firma'
+const FROM_NAME = process.env.EMAIL_NAME ?? ''
 const FROM = `${FROM_NAME} <${FROM_EMAIL}>`
 const OWNER_EMAIL = required('EMAIL_CURRENT')
 
@@ -47,7 +47,6 @@ export async function POST(req: NextRequest) {
 				messageDate: new Date().toISOString().replace('T', ' ').split('.')[0],
 			}),
 			// html: `<p>Hello, ${name ?? ''} — your message has been successfully sent! I will get back to you soon.</p>`,
-			// tba react email teamplate
 		})
 
 		return NextResponse.json({ ok: true, toYou, toClient })
