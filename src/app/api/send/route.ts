@@ -1,6 +1,8 @@
 import { NextResponse, NextRequest } from 'next/server'
 import { Resend } from 'resend'
 
+import { MatroxDevConfirm } from '@/emails/matrox-dev-confirm'
+
 export const runtime = 'nodejs'
 
 const resend = new Resend(required('RESEND_API_KEY'))
@@ -38,12 +40,18 @@ export async function POST(req: NextRequest) {
 			from: FROM,
 			to: email,
 			subject: 'Thanks for your message!',
-			html: `<p>Hello, ${name ?? ''} — your message has been successfully sent! I will get back to you soon.</p>`,
+			react: MatroxDevConfirm({
+				userFirstName: name ?? 'null',
+				userEmail: email,
+				userMessage: message,
+				messageDate: new Date().toISOString().replace('T', ' ').split('.')[0],
+			}),
+			// html: `<p>Hello, ${name ?? ''} — your message has been successfully sent! I will get back to you soon.</p>`,
 			// tba react email teamplate
 		})
 
 		return NextResponse.json({ ok: true, toYou, toClient })
-	} catch (err: unknown ) {
+	} catch (err: unknown) {
 		console.error('Resend error:', err)
 		return NextResponse.json({ ok: false, error: (err as Error)?.message ?? 'Unknown error' }, { status: 500 })
 	}

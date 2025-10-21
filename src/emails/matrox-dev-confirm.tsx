@@ -1,20 +1,15 @@
 import { Body, Column, Container, Head, Heading, Html, Img, Preview, Row, Section, Text } from '@react-email/components'
 
-interface YelpRecentLoginEmailProps {
+interface MatroxDevConfirmProps {
 	userFirstName: string
 	userEmail: string
 	messageDate: string
 	userMessage: string
 }
 
-const baseUrl = process.env.MATROX_DEV_URL ? `https://${process.env.MATROX_DEV_URL}` : ''
+const baseUrl = process.env.NEXT_BASE_URL ? `https://${process.env.NEXT_BASE_URL}` : ''
 
-export const YelpRecentLoginEmail = ({
-	userFirstName,
-	userEmail,
-	messageDate,
-	userMessage,
-}: YelpRecentLoginEmailProps) => {
+export const MatroxDevConfirm = ({ userFirstName, userEmail, messageDate, userMessage }: MatroxDevConfirmProps) => {
 	const date = new Date().getFullYear()
 
 	return (
@@ -24,12 +19,12 @@ export const YelpRecentLoginEmail = ({
 				<Preview>Yelp recent login</Preview>
 				<Container>
 					<Section style={logo_section}>
-						<Img style={logo} src={`${baseUrl}/static/email_logo.png`} alt="matrox.dev logo" />
+						<Img style={logo} src={`${baseUrl}/assets/email/email_logo.png`} alt="matrox.dev logo" />
 					</Section>
 
 					<Section style={content}>
 						<Row>
-							<Img style={image} width={620} src={`${baseUrl}/static/email_hero.png`} alt="Yelp header illustration" />
+							<Img style={image} width={620} src={`${baseUrl}/assets/email/email_hero.png`} alt="Yelp header illustration" />
 						</Row>
 
 						<Row style={{ ...boxInfos, paddingBottom: '0' }}>
@@ -75,15 +70,13 @@ export const YelpRecentLoginEmail = ({
 	)
 }
 
-YelpRecentLoginEmail.PreviewProps = {
+MatroxDevConfirm.PreviewProps = {
 	userFirstName: 'Mateusz',
 	userEmail: 'mateusz.kozera@matrox.dev',
 	messageDate: new Date().toISOString().replace('T', ' ').split('.')[0],
 	userMessage:
 		'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut aperiam eaque in quam modi neque, cumque sapiente quibusdam id impedit dolorem accusamus corrupti adipisci ea illo dolores ad? Unde commodi, perspiciatis maxime facere harum sapiente quia blanditiis fuga temporibus debitis est eveniet. Dignissimos amet officiis exercitationem voluptate! Quidem sint laborum temporibus accusantium nemo, vero, optio omnis doloremque cum possimus error odio aspernatur excepturi. Obcaecati.',
-} as YelpRecentLoginEmailProps
-
-export default YelpRecentLoginEmail
+} as MatroxDevConfirmProps
 
 const main = {
 	backgroundColor: '#fff',
