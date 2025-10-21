@@ -43,8 +43,8 @@ export async function POST(req: NextRequest) {
 		})
 
 		return NextResponse.json({ ok: true, toYou, toClient })
-	} catch (err: any) {
+	} catch (err: unknown ) {
 		console.error('Resend error:', err)
-		return NextResponse.json({ ok: false, error: err?.message ?? 'Unknown error' }, { status: 500 })
+		return NextResponse.json({ ok: false, error: (err as Error)?.message ?? 'Unknown error' }, { status: 500 })
 	}
 }
