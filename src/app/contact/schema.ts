@@ -15,3 +15,4 @@ export const contactSchema = z.object({
 })
 
 export type contactInput = z.infer<typeof contactSchema>
+	
