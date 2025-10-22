@@ -53,8 +53,6 @@ function Profile() {
 					</motion.h3>
 				</motion.div>
 			</motion.div>
-
-			{/* Opis obok */}
 			<div className="flex flex-col gap-5 max-w-4xl">
 				<h3 className="text-2xl font-bold">About Me</h3>
 				<p className="text-lg font-light">
