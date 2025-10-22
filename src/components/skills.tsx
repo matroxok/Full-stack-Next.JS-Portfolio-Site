@@ -3,6 +3,8 @@ import { Martian_Mono } from 'next/font/google'
 import Link from 'next/link'
 import { Fragment } from 'react'
 
+type LinkItem = string | { name: string; href?: string }
+
 const martianMono = Martian_Mono({
 	subsets: ['latin'],
 	weight: ['400', '700'],
@@ -29,7 +31,7 @@ export default function Skills() {
 								</span>
 
 								<p className="ml-4 text-white lg:font-semibold text-sm lg:text-md">
-									{row.items.map((item: any, j: number) => {
+									{row.items.map((item: LinkItem, j: number) => {
 										const name = typeof item === 'string' ? item : item.name
 										const href = typeof item === 'string' ? undefined : item.href
 

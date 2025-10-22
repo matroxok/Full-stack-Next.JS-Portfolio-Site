@@ -8,6 +8,7 @@ import { useTransition, useState } from 'react'
 
 interface ContactFormProps {
 	onSuccess: () => void
+	onError?: (error: string) => void
 }
 
 const martianMono = Martian_Mono({
@@ -15,7 +16,7 @@ const martianMono = Martian_Mono({
 	weight: ['400', '700'],
 })
 
-export default function ContactForm({ onSuccess }: ContactFormProps) {
+export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 	const [pending, startTransition] = useTransition()
 	const [status, setStatus] = useState<null | { ok: boolean; msg: string }>(null)
 
@@ -47,8 +48,13 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 				reset()
 				// setStatus({ ok: true, msg: 'Wiadomość wysłana. Dzięki! ✉️' })
 				onSuccess()
-			} catch (err: any) {
-				setStatus({ ok: false, msg: err?.message ?? 'Nie udało się wysłać.' })
+			} catch (err: unknown) {
+				// setStatus({ ok: false, msg: err?.message ?? 'Nie udało się wysłać.' })
+				if (err instanceof Error) {
+					onError?.(err.message)
+				} else {
+					onError?.('Nie udało się wysłać.')
+				}
 			}
 		})
 	}
