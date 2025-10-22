@@ -9,12 +9,12 @@ const martianMono = Martian_Mono({
 
 export default function Portfolio({ data }: { data: PortfolioItem[] }) {
 	return (
-		<div id="portfolio" className="w-full h-auto bg-[#171717]">
+		<div id="portfolio" className="w-full h-auto bg-[#171717] px-5 lg:px-0">
 			<div className="container mx-auto py-16">
 				<div className="flex justify-center">
 					<div className={`${martianMono.className} flex flex-col items-center`}>
-						<p className="font-extralight text-sm italic">cd home/dev/matrox_dev</p>
-						<h3 className="font-regular text-2xl">
+						<p className="font-extralight text-xs lg:text-sm italic">cd home/dev/matrox_dev</p>
+						<h3 className="font-regular text-md lg:text-2xl">
 							return (<span className="text-green-400">Portfolio</span>)
 						</h3>
 					</div>

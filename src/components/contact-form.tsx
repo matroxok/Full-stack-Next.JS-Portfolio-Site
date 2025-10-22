@@ -56,38 +56,41 @@ export default function ContactForm({ onSuccess }: ContactFormProps) {
 	return (
 		<div
 			id="contact-form"
-			className="w-full h-auto bg-[linear-gradient(180deg,#0A0A0A_0%,rgba(255,255,255,0.01)_2411.5%)]">
+			className="w-full h-auto bg-[linear-gradient(180deg,#0A0A0A_0%,rgba(255,255,255,0.01)_2411.5%)] px-5 lg:px-0">
 			<div className="container mx-auto py-16">
 				<div className="flex justify-center pb-8 ">
 					<div className={`${martianMono.className} flex flex-col items-center`}>
-						<p className="font-extralight text-sm italic">
+						<p className="font-extralight text-xs lg:text-sm italic">
 							<span className="text-[#53C1DE]">export</span> function <span className="text-[#F5BD4F]">Contact</span>(){' '}
 							{'{'}
 						</p>
-						<h3 className="font-regular text-2xl">
+						<h3 className="font-regular text-md lg:text-2xl">
 							return (<span className="text-green-400">Contact Form</span>){'}'}
 						</h3>
 					</div>
 				</div>
-				<div className="flex flex-col justify-center items-center gap-10 w-auto h-auto p-10 border-dashed border-3 border-[#161616]">
-					<p className="uppercase font-bold text-4xl">stay in touch</p>
+				<div className="flex flex-col justify-center items-center gap-10 w-auto h-auto lg:p-10 border-dashed border-3 border-[#161616]">
+					<p className="uppercase font-bold text-xl lg:text-4xl">stay in touch</p>
 
-					<div className="w-auto h-auto flex justify-center items-center gap-6">
+					<div className="w-auto h-auto flex justify-between lg:justify-center items-center lg:gap-6">
 						<Avatar>
-							<AvatarImage src="/assets/contact_avatar.svg" />
-							<AvatarFallback>CN</AvatarFallback>
+							<AvatarImage src="/assets/contact_avatar.svg" className="w-16 lg:w-20 h-auto" />
+							<AvatarFallback>matrox.dev</AvatarFallback>
 						</Avatar>
-						<p className="text-center font-light border-2 rounded-lg border-[#5A5A5A] p-4">
-							Need help? Use the form below or email me at <br />
-							<span className="font-semibold">mateusz.kozera@matrox.dev</span>
+						<p className="lg:text-center font-light text-xs lg:text-md lg:border-2 rounded-lg border-[#5A5A5A] p-4">
+							Need help?{' '}
+							<span className="lg:hidden">
+								<br />
+							</span>{' '}
+							Use the form below or email me at <br />
+							<span className="font-semibold block lg:inline-block mt-2 lg:mt-0">mateusz.kozera@matrox.dev</span>
 						</p>
 					</div>
 
 					<form
 						onSubmit={handleSubmit(onSubmit)}
-						className="flex flex-col gap-8 items-center w-full max-w-2xl"
+						className="flex flex-col gap-8 items-center w-full lg:max-w-2xl"
 						noValidate>
-						{/* // ani-spam */}
 						<input type="text" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
 						<div className="w-full flex flex-col">
 							<div className="flex flex-col gap-1">

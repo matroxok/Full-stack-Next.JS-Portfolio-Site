@@ -18,17 +18,17 @@ export default function TerminalWindow({ onClose }: TerminalWindowProps) {
 				<div className="block md:hidden">
 					<div className="flex flex-col items-center text-center gap-3 px-1">
 						<div className="text-4xl">✉️</div>
-						<h2 className="text-lg font-semibold">Message sent</h2>
-						<p className="text-sm text-neutral-300 leading-relaxed">
+						<h2 className="text-lg text-white font-semibold">Success!</h2>
+						<p className="text-xs text-neutral-300 leading-relaxed">
 							Thanks! Your message has been delivered. You’ll receive a confirmation in your inbox shortly.
 						</p>
 					</div>
 
-					<div className="mt-6 flex items-center justify-end">
+					<div className="mt-6 flex items-center justify-center">
 						<button
 							onClick={onClose}
-							className="w-full bg-green-400 hover:bg-green-800 text-black
-                         font-semibold py-2.5 px-6 rounded-lg transition-colors duration-200 cursor-pointer">
+							className=" bg-green-400 hover:bg-green-800 text-black
+                         font-semibold py-3 px-8 rounded-lg transition-colors duration-200 cursor-pointer text-sm">
 							Close
 						</button>
 					</div>

@@ -10,7 +10,7 @@ const martianMono = Martian_Mono({
 
 export default function Skills() {
 	return (
-		<div className="w-full h-auto bg-[#171717]">
+		<div className="w-full h-auto bg-[#171717] px-5 lg:px-0 pt-10 lg:pt-0">
 			<div className="container mx-auto pb-16">
 				<div className="relative flex items-baseline w-full">
 					<div className="flex-1 h-[2px] bg-[radial-gradient(circle,white_1.2px,transparent_1.2px)] bg-[length:8px_2px] bg-repeat-x translate-y-[0.28em]"></div>
@@ -20,7 +20,7 @@ export default function Skills() {
 					<h2 id="skills-heading" className="sr-only">
 						Skills
 					</h2>
-					<ul className="divide-y divide-neutral-700">
+					<ul className="divide-y divide-neutral-700 pt-10 lg:pt-0">
 						{skills.map((row, i) => (
 							<li key={`skill-row-${i}`} className="flex items-start py-4">
 								<span
@@ -28,7 +28,7 @@ export default function Skills() {
 									{String(i + 1).padStart(2, '0')}
 								</span>
 
-								<p className="ml-4 text-white font-semibold">
+								<p className="ml-4 text-white lg:font-semibold text-sm lg:text-md">
 									{row.items.map((item: any, j: number) => {
 										const name = typeof item === 'string' ? item : item.name
 										const href = typeof item === 'string' ? undefined : item.href
