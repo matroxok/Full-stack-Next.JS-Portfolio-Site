@@ -14,7 +14,7 @@ function Profile() {
 				initial="rest"
 				whileHover="hover"
 				animate="rest"
-				className="relative w-[400px] h-[400px] rounded-lg overflow-hidden shadow-[0_0_54.078px_0_rgba(255,255,255,0.20)] will-change-transform"
+				className="hidden lg:relative w-[400px] h-[400px] rounded-lg overflow-hidden shadow-[0_0_54.078px_0_rgba(255,255,255,0.20)] will-change-transform"
 				variants={{
 					rest: { scale: 1 },
 					hover: { scale: 1.03 },
@@ -75,11 +75,11 @@ function Profile() {
 
 export default function About() {
 	return (
-		<div id='about' className="w-full h-auto bg-[#171717] mt-24">
+		<div id="about" className="w-full h-auto px-5 lg:px-0 bg-[#171717] mt-24">
 			<div className="container mx-auto py-16">
 				<div className={`${martianMono.className} flex flex-col`}>
-					<p className="font-extralight text-sm italic">cd home/dev/matrox_dev</p>
-					<h3 className="font-regular text-2xl">
+					<p className="font-extralight text-xs lg:text-sm italic">cd home/dev/matrox_dev</p>
+					<h3 className="font-regular text-md lg:text-2xl">
 						return (<span className="text-green-400">AboutMe</span>)
 					</h3>
 				</div>
