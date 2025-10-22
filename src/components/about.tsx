@@ -55,9 +55,10 @@ function Profile() {
 			</motion.div>
 			<div className="flex flex-col gap-5 lg:max-w-4xl">
 				<h3 className="text-lg lg:text-2xl font-bold">About Me</h3>
-				<p className="text-sm lg:text-md font-light flex flex-col">
-					Hi, I'm Mateusz — a person who has always believed that ambition and determination are the keys to growth.
-					Programming isn’t just my profession — it’s something that genuinely brings me joy and satisfaction 👨‍💻.
+				<p className="text-sm lg:text-md font-light flex flex-col text-justify leading-relaxed">
+					Hi, I&apos;m Mateusz — a person who has always believed that ambition and determination are the keys to
+					growth. Programming isn&apos;t just my profession — it&apos;s something that genuinely brings me joy and
+					satisfaction 👨‍💻.
 					<span className="my-4">
 						I believe that learning never truly ends 🧠. Every conversation, every shared experience, and every project
 						is a chance to grow and see things from a new perspective.

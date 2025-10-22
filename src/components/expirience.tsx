@@ -35,7 +35,7 @@ export const LinkedinButton = () => {
 
 export default function Expirience() {
 	const date = new Date().getUTCFullYear()
-	let expirienceYears = date - 2023
+	const expirienceYears = date - 2023
 
 	return (
 		<div id="expirience" className="w-full h-auto px-5 lg:px-0 bg-[#171717]">
@@ -52,14 +52,14 @@ export default function Expirience() {
 					<div className="flex flex-col justify-start items-start max-w-4xl gap-4 py-16">
 						<SparklesText>Expirience</SparklesText>
 						<p className="font-light text-sm lg:text-lg text-justify leading-relaxed">
-							I’ve been working in the IT industry for over{' '}
+							I&apos;ve been working in the IT industry for over
 							<span className="text-yellow-500">{expirienceYears + ' years'}</span>, constantly developing my skills and
 							gaining new experience.
 							<span className="block my-4">
 								I approach every project individually, believing that each one has its own story and deserves a unique
 								perspective.
 							</span>
-							I’m currently studying at{' '}
+							I&apos;m currently studying at{' '}
 							<span className="text-red-300">Wrocław University of Science and Technology</span>, where I continue to
 							expand my knowledge in computer science and modern technologies. You can find more details about my
 							professional background on my LinkedIn profile.
