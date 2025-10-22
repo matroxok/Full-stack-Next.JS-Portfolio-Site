@@ -22,6 +22,7 @@ export const skills: Skill[] = [
 			{ name: 'Git', href: 'https://git-scm.com/' },
 			{ name: 'GitHub', href: 'https://github.com/' },
 			{ name: 'Postman', href: 'https://www.postman.com/' },
+			{ name: 'Bash', href: 'https://www.gnu.org/software/bash/' },
 		],
 	},
 	{

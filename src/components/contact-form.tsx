@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { contactSchema, type contactInput } from '@/app/contact/schema'
+import { contactSchema, type contactInput } from '@/zod/schema'
 import { useTransition, useState } from 'react'
 
 interface ContactFormProps {

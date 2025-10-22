@@ -34,6 +34,9 @@ export const LinkedinButton = () => {
 }
 
 export default function Expirience() {
+	const date = new Date().getUTCFullYear()
+	let expirienceYears = date - 2023
+
 	return (
 		<div id="expirience" className="w-full h-auto px-5 lg:px-0 bg-[#171717]">
 			<div className="container mx-auto pt-16">
@@ -48,12 +51,18 @@ export default function Expirience() {
 					</div>
 					<div className="flex flex-col justify-start items-start max-w-4xl gap-4 py-16">
 						<SparklesText>Expirience</SparklesText>
-						<p className="font-light text-sm lg:text-lg">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis voluptate nostrum perspiciatis
-							voluptatem, voluptatum eos sed vitae illo eligendi ut, exercitationem consequatur ex iure repudiandae,
-							magnam dolor eum minima a ipsum aut molestias. Necessitatibus cumque sed soluta, id animi et mollitia
-							commodi eveniet exercitationem rerum nihil quod libero autem dignissimos, explicabo inventore aperiam
-							laudantium natus? Quod veniam magni nemo error. Facere voluptate suscipit quia!
+						<p className="font-light text-sm lg:text-lg text-justify leading-relaxed">
+							I’ve been working in the IT industry for over{' '}
+							<span className="text-yellow-500">{expirienceYears + ' years'}</span>, constantly developing my skills and
+							gaining new experience.
+							<span className="block my-4">
+								I approach every project individually, believing that each one has its own story and deserves a unique
+								perspective.
+							</span>
+							I’m currently studying at{' '}
+							<span className="text-red-300">Wrocław University of Science and Technology</span>, where I continue to
+							expand my knowledge in computer science and modern technologies. You can find more details about my
+							professional background on my LinkedIn profile.
 						</p>
 						<div className="w-full flex lg:justify-center itens-center mt-5 lg:mt-10">
 							<LinkedinButton />
