@@ -14,7 +14,7 @@ function Profile() {
 				initial="rest"
 				whileHover="hover"
 				animate="rest"
-				className="hidden lg:relative w-[400px] h-[400px] rounded-lg overflow-hidden shadow-[0_0_54.078px_0_rgba(255,255,255,0.20)] will-change-transform"
+				className="hidden lg:block relative w-[400px] h-[400px] rounded-lg overflow-hidden shadow-[0_0_54.078px_0_rgba(255,255,255,0.20)] will-change-transform"
 				variants={{
 					rest: { scale: 1 },
 					hover: { scale: 1.03 },
@@ -53,18 +53,23 @@ function Profile() {
 					</motion.h3>
 				</motion.div>
 			</motion.div>
-			<div className="flex flex-col gap-5 max-w-4xl">
-				<h3 className="text-2xl font-bold">About Me</h3>
-				<p className="text-lg font-light">
+			<div className="flex flex-col gap-5 lg:max-w-4xl">
+				<h3 className="text-lg lg:text-2xl font-bold">About Me</h3>
+				<p className="text-sm lg:text-lg font-light">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab et rem dignissimos expedita rerum, recusandae
 					debitis, numquam amet illo voluptatem cumque facilis neque eius saepe. Molestiae mollitia magni voluptatibus
 					ut facere et neque fugit molestias architecto accusantium consequuntur asperiores, dolor laudantium dolores
 					pariatur? Reiciendis ab nihil expedita exercitationem sapiente iusto quos quibusdam nam sed, enim culpa autem
 					cum! Enim repellat eius commodi maxime beatae.
 				</p>
-				<div className="w-fit h-auto p-4 rounded-tr-4xl rounded-br-4xl pr-6 flex gap-1 items-center bg-[#374151]">
-					<LocationOnIcon fontSize="large" />
-					<p className="text-lg uppercase ">wroclaw, Warsaw - Poland</p>
+				<div className="w-fit h-auto p-4 rounded-2xl lg:rounded-tr-4xl lg:rounded-br-4xl items-center lg:pr-6 flex gap-1 bg-[#374151]">
+					<div className="inline-block lg:hidden">
+						<LocationOnIcon fontSize="small" />
+					</div>
+					<div className="hidden lg:inline-block">
+						<LocationOnIcon fontSize="large" />
+					</div>
+					<p className="text-sm lg:text-lg uppercase ">wroclaw, Warsaw - Poland</p>
 				</div>
 			</div>
 		</div>

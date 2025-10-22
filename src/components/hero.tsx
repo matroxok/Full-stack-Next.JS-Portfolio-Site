@@ -29,10 +29,11 @@ export const SafariButton = () => {
 
 export default function Hero() {
 	return (
-		<div className="container px-5 lg:mx-auto flex justify-around items-start mt-24 w-full h-auto">
+		<div className="container px-5 lg:px-0 lg:mx-auto flex justify-around items-start mt-24 w-full h-auto">
 			<div className="flex flex-col items-center lg:items-start gap-6 w-full h-auto">
 				<p className="font-semibold text-center lg:text-start text-sm lg:text-md">
-					Hi, I&apos;m Mateusz <br /> <span className="uppercase font-normal">web developer & ui/ux designer</span>
+					Hi, I&apos;m Mateusz<span className="inline-block lg:hidden">👋</span> <br />{' '}
+					<span className="uppercase font-normal">web developer & ui/ux designer</span>
 				</p>
 				<h1 className="flex flex-col items-center lg:items-start gap-1 text-2xl lg:text-4xl font-semibold text-">
 					Your idea, My execution, <br />
