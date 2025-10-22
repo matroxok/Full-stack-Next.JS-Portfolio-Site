@@ -17,7 +17,7 @@ export const portfolio: PortfolioItem[] = [
 	{
 		items: [
 			{
-				tech: 'Next.js Express.js stripe Node.js docker mongodb tailwindcss',
+				tech: 'Next.js stripe Node docker mongodb tailwindcss',
 				title: 'HealthyBox.be',
 				description: 'Food Order Full-Stack App',
 				image: '/assets/projects/matrox_dev_healthybox.png',

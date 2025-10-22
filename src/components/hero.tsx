@@ -29,25 +29,25 @@ export const SafariButton = () => {
 
 export default function Hero() {
 	return (
-		<div className="container mx-auto flex justify-around items-start mt-24 w-full h-auto">
-			<div className="flex flex-col gap-6 w-full h-auto">
-				<p className="font-semibold">
+		<div className="container px-5 lg:mx-auto flex justify-around items-start mt-24 w-full h-auto">
+			<div className="flex flex-col items-center lg:items-start gap-6 w-full h-auto">
+				<p className="font-semibold text-center lg:text-start text-sm lg:text-md">
 					Hi, I&apos;m Mateusz <br /> <span className="uppercase font-normal">web developer & ui/ux designer</span>
 				</p>
-				<h1 className="flex flex-col gap-1 text-4xl font-semibold text-">
+				<h1 className="flex flex-col items-center lg:items-start gap-1 text-2xl lg:text-4xl font-semibold text-">
 					Your idea, My execution, <br />
-					<div className="text-3xl font-bold tracking-tight md:text-3xl">
+					<div className="font-bold tracking-tight">
 						<PointerHighlight>
 							<span className="uppercase text-5xl px-2 py-6">our succes.</span>
 						</PointerHighlight>
 					</div>
 				</h1>
-				<h2 className="max-w-2xl pt-2">
+				<h2 className="text-center text-md lg:text-start max-w-2xl pt-2">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem modi numquam quam laudantium reprehenderit
 					tempora soluta, nulla distinctio ratione animi officiis eveniet et earum, saepe vero dolore reiciendis
 					laboriosam placeat explicabo sint?
 				</h2>
-				<div className="flex gap-10 mt-2">
+				<div className="w-full flex justify-around lg:justify-start lg:gap-10 pt-8 lg:mt-2">
 					<CvButton />
 					<ContactButton
 						borderRadius="10px"
@@ -57,7 +57,7 @@ export default function Hero() {
 				</div>
 			</div>
 
-			<div>
+			<div className="hidden lg:block">
 				<SafariButton />
 			</div>
 		</div>

@@ -35,7 +35,7 @@ export default function Home() {
 				<nav className="sticky mt-5 top-0 z-[100]">
 					<Nav></Nav>
 				</nav>
-				<main className="">
+				<main>
 					<Hero></Hero>
 					<About></About>
 					<div className="w-full border-t border-dotted border-[#D4D4D4]"></div>
