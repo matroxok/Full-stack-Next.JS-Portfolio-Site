@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Script from 'next/script'
 
 import { Nav } from '@/components/navbar'
 import Hero from '@/components/hero'
@@ -24,6 +25,28 @@ export default function Home() {
 		setShowTerminal(true)
 	}
 
+	const person = {
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		name: 'Mateusz Kozera',
+		url: 'https://matrox.dev',
+		sameAs: ['https://www.linkedin.com/in/mateusz-kozera-a30566313/', 'https://github.com/matroxok'],
+		jobTitle: 'Web Developer, HPC Worker, IT Student',
+		worksFor: { '@type': 'Organization', name: 'matrox.dev' },
+	}
+
+	const webSite = {
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'matrox.dev',
+		url: 'https://matrox.dev',
+		potentialAction: {
+			'@type': 'SearchAction',
+			target: 'https://matrox.dev/search?q={query}',
+			'query-input': 'required name=query',
+		},
+	}
+
 	return (
 		<>
 			{showTerminal && (
@@ -32,7 +55,7 @@ export default function Home() {
 				</div>
 			)}
 			<div className="text-white w-full h-full">
-				<nav className="sticky mt-5 top-0 z-[100]">
+				<nav className="sticky mt-5 top-0 z-100">
 					<Nav></Nav>
 				</nav>
 				<main>
@@ -46,6 +69,12 @@ export default function Home() {
 				</main>
 				<footer></footer>
 			</div>
+			<Script id="ld-person" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />
+			<Script
+				id="ld-website"
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}
+			/>
 		</>
 	)
 }

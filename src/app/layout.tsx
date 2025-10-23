@@ -9,7 +9,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-	metadataBase: new URL('https://www.matrox.dev'),
+	metadataBase: new URL('https://matrox.dev'),
 	title: {
 		default: 'matrox.dev | Mateusz Kozera — Web Developer & UI/UX',
 		template: '%s | matrox.dev',
