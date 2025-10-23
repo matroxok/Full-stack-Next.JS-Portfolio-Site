@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Script from 'next/script'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { Nav } from '@/components/navbar'
 import Hero from '@/components/hero'
