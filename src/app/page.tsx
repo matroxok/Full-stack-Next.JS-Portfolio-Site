@@ -69,6 +69,7 @@ export default function Home() {
 					<ContactForm onSuccess={handleSuccess}></ContactForm>
 				</main>
 				<footer></footer>
+				<SpeedInsights />
 			</div>
 			<Script id="ld-person" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />
 			<Script
