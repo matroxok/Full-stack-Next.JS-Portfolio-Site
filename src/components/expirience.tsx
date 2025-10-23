@@ -53,8 +53,8 @@ export default function Expirience() {
 						<SparklesText>Expirience</SparklesText>
 						<p className="font-light text-sm lg:text-lg text-justify leading-relaxed">
 							I&apos;ve been working in the IT industry for over
-							<span className="text-yellow-500">{expirienceYears + ' years'}</span>, constantly developing my skills and
-							gaining new experience.
+							<span className="text-yellow-500"> {expirienceYears + ' years'}</span>, constantly developing my skills
+							and gaining new experience.
 							<span className="block my-4">
 								I approach every project individually, believing that each one has its own story and deserves a unique
 								perspective.
