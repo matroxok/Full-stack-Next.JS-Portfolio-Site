@@ -7,8 +7,6 @@ interface MatroxDevConfirmProps {
 	userMessage: string
 }
 
-const baseUrl = process.env.NEXT_BASE_URL ? `https://${process.env.NEXT_BASE_URL}` : ''
-
 export const MatroxDevConfirm = ({ userFirstName, userEmail, messageDate, userMessage }: MatroxDevConfirmProps) => {
 	const date = new Date().getFullYear()
 
@@ -19,12 +17,17 @@ export const MatroxDevConfirm = ({ userFirstName, userEmail, messageDate, userMe
 				<Preview>Yelp recent login</Preview>
 				<Container>
 					<Section style={logo_section}>
-						<Img style={logo} src={`${baseUrl}/assets/email/email_logo.png`} alt="matrox.dev logo" />
+						<Img style={logo} src={`${process.env.NEXT_BASE_URL}/assets/email/email_logo.png`} alt="matrox.dev logo" />
 					</Section>
 
 					<Section style={content}>
 						<Row>
-							<Img style={image} width={620} src={`${baseUrl}/assets/email/email_hero.png`} alt="Yelp header illustration" />
+							<Img
+								style={image}
+								width={620}
+								src={`${process.env.NEXT_BASE_URL}/assets/email/email_hero.png`}
+								alt="Yelp header illustration"
+							/>
 						</Row>
 
 						<Row style={{ ...boxInfos, paddingBottom: '0' }}>
