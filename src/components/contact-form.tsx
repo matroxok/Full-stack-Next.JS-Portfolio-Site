@@ -6,6 +6,9 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { contactSchema, type contactInput } from '@/zod/schema'
 import { useTransition, useState } from 'react'
 
+import ReCAPTCHA from 'react-google-recaptcha'
+import { useRef } from 'react'
+
 interface ContactFormProps {
 	onSuccess: () => void
 	onError?: (error: string) => void
@@ -20,6 +23,9 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 	const [pending, startTransition] = useTransition()
 	const [status, setStatus] = useState<null | { ok: boolean; msg: string }>(null)
 
+	const recaptchaRef = useRef<ReCAPTCHA | null>(null)
+	const [captchaToken, setCaptchaToken] = useState<string | null>(null)
+
 	const {
 		register,
 		handleSubmit,
@@ -33,12 +39,19 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 
 	const onSubmit = (data: contactInput) => {
 		setStatus(null)
+
+		// captcha check
+		if (!captchaToken) {
+			setStatus({ ok: false, msg: 'Please confirm the reCAPTCHA.' })
+			return
+		}
 		startTransition(async () => {
 			try {
 				const res = await fetch('/api/send', {
 					method: 'POST',
 					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify(data),
+					// body: JSON.stringify(data),
+					body: JSON.stringify({ ...data, recaptchaToken: captchaToken }),
 				})
 
 				if (!res.ok) {
@@ -46,9 +59,13 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 					throw new Error(body?.error ?? `HTTP ${res.status}`)
 				}
 				reset()
+				setCaptchaToken(null)
+				recaptchaRef.current?.reset()
 				// setStatus({ ok: true, msg: 'Wiadomość wysłana. Dzięki! ✉️' })
 				onSuccess()
 			} catch (err: unknown) {
+				setCaptchaToken(null)
+				recaptchaRef.current?.reset()
 				// setStatus({ ok: false, msg: err?.message ?? 'Nie udało się wysłać.' })
 				if (err instanceof Error) {
 					onError?.(err.message)
@@ -145,9 +162,24 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 								{errors.message && <p className="text-red-400 text-xs mt-1">{errors.message.message}</p>}
 							</div>
 						</div>
-						<button
+						{/* <button
 							type="submit"
 							disabled={pending}
+							className="bg-green-400 text-black py-4 px-8 rounded-2xl cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed">
+							{pending ? 'Sending…' : 'Send message'}
+						</button> */}
+						<ReCAPTCHA
+							ref={recaptchaRef}
+							sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+							onChange={token => setCaptchaToken(token as string)}
+							onExpired={() => setCaptchaToken(null)}
+							onErrored={() => setCaptchaToken(null)}
+							theme="dark"
+						/>
+
+						<button
+							type="submit"
+							disabled={pending || !captchaToken} // no token
 							className="bg-green-400 text-black py-4 px-8 rounded-2xl cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed">
 							{pending ? 'Sending…' : 'Send message'}
 						</button>
