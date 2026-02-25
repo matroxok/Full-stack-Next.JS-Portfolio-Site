@@ -14,7 +14,7 @@ function Profile() {
 				initial="rest"
 				whileHover="hover"
 				animate="rest"
-				className="hidden lg:block relative w-[400px] h-[400px] rounded-lg overflow-hidden shadow-[0_0_54.078px_0_rgba(255,255,255,0.20)] will-change-transform"
+				className="hidden lg:block relative w-[400px] h-[400px] rounded-lg overflow-hidden shadow-[0_0_54.078px_0_rgba(255,255,255,0.20)] will-change-transform "
 				variants={{
 					rest: { scale: 1 },
 					hover: { scale: 1.03 },
@@ -53,7 +53,7 @@ function Profile() {
 					</motion.h3>
 				</motion.div>
 			</motion.div>
-			<div className="flex flex-col gap-5 lg:max-w-4xl">
+			<div className="flex flex-col gap-5 lg:max-w-4xl ml-12">
 				<h3 className="text-lg lg:text-2xl font-bold">About Me</h3>
 				<p className="text-sm lg:text-md font-light flex flex-col text-justify leading-relaxed">
 					Hi, I&apos;m Mateusz — a person who has always believed that ambition and determination are the keys to

@@ -1,7 +1,15 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
+import { NextIntlClientProvider, hasLocale } from 'next-intl'
+import { notFound } from 'next/navigation'
+import { routing } from '@/i18n/routing'
 
 import './globals.css'
+
+type Props = {
+	children: React.ReactNode
+	params: Promise<{ locale: string }>
+}
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -28,22 +36,24 @@ export const metadata: Metadata = {
 		description:
 			'I am Mateusz Kozera, IT Worker & Student. Currently i have over 2 yeras of expirience in High Performance Computing (HPC) and Web Development.',
 		images: ['/og.jpg'],
-		locale: 'en_EN',
-	},	
+		// locale: 'en_EN',
+	},
 	icons: {
 		icon: '/favicon.ico',
 	},
 	// manifest: '/site.webmanifest',
 }
 
-export default function RootLayout({
-	children,
-}: Readonly<{
-	children: React.ReactNode
-}>) {
+export default async function RootLayout({ children, params }: Props) {
+	const { locale } = await params
+	if (!hasLocale(routing.locales, locale)) {
+		notFound()
+	}
 	return (
-		<html lang="en">
-			<body className={`${poppins.className} bg-[#0a0a0a]`}>{children}</body>
+		<html lang={locale}>
+			<body className={`${poppins.className} bg-[#0a0a0a]`}>
+				<NextIntlClientProvider locale={locale}>{children}</NextIntlClientProvider>
+			</body>
 		</html>
 	)
 }
