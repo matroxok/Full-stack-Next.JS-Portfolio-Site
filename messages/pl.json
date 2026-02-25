@@ -1,4 +1,11 @@
 {
+	"Navbar": {
+		"home": "Home",
+		"about": "O mnie",
+		"experience": "Doświadczenie",
+		"portfolio": "Portfolio",
+		"contact": "Kontakt"
+	},
 	"HomePage": {
 		"title": "Witaj Swiecie"
 	}

@@ -14,23 +14,26 @@ import {
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 export function Nav() {
+	const t = useTranslations('Navbar')
+
 	const navItems = [
 		{
-			name: 'Home',
+			name: t('home'),
 			link: '#home',
 		},
 		{
-			name: 'About',
+			name: t('about'),
 			link: '#about',
 		},
 		{
-			name: 'Expirience',
-			link: '#expirience',
+			name: t('experience'),
+			link: '#experience',
 		},
 		{
-			name: 'Portfolio',
+			name: t('portfolio'),
 			link: '#portfolio',
 		},
 	]
@@ -50,7 +53,7 @@ export function Nav() {
 							scroll={true}
 							className="relative z-50 pointer-events-auto bg-[#171717] text-white flex items-center justify-center gap-2 hover:bg-[#374151] focus:outline-none focus:ring-0 active:outline-none no-underline rounded-md px-4 py-2 transition-colors duration-200">
 							<Image src="/message-dollar.svg" alt="" width={20} height={20} />
-							Contact
+							{t('contact')}
 						</Link>
 					</div>
 				</NavBody>
@@ -74,7 +77,7 @@ export function Nav() {
 						))}
 						<div className="flex w-full flex-col gap-4">
 							<NavbarButton onClick={() => setIsMobileMenuOpen(false)} variant="primary" className="w-full">
-								Contact
+								{t('contact')}
 							</NavbarButton>
 						</div>
 					</MobileNavMenu>
