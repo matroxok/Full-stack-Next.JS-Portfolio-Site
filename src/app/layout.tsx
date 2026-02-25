@@ -29,11 +29,11 @@ export const metadata: Metadata = {
 			'I am Mateusz Kozera, IT Worker & Student. Currently i have over 2 yeras of expirience in High Performance Computing (HPC) and Web Development.',
 		images: ['/og.jpg'],
 		locale: 'en_EN',
-	},
+	},	
 	icons: {
 		icon: '/favicon.ico',
 	},
-	manifest: '/site.webmanifest',
+	// manifest: '/site.webmanifest',
 }
 
 export default function RootLayout({
