@@ -22,8 +22,8 @@
 	},
 	"Experience": {
 		"title": "Experience",
-		"1": "I've been working in the IT industry for over {years} years, gaining experience in projects related to High Performance Computing (HPC), WEB Development, and UI/UX Design.",
-		"2": "I'm currently studying at Wrocław University of Science and Technology, where I continue to expand my knowledge in computer science and modern technologies. You can find more details about my professional background on my LinkedIn profile.",
+		"1": "I've been working in the IT industry for over <highlight>{years} years</highlight>, gaining experience in projects related to High Performance Computing (HPC), WEB Development, and UI/UX Design.",
+		"2": "I'm currently studying at <highlight>Wrocław University of Science and Technology</highlight>, where I continue to expand my knowledge in computer science and modern technologies. You can find more details about my professional background on my LinkedIn profile.",
 		"LinkedinButton": "Detailed information on my"
 	},
 	"Portfolio": {

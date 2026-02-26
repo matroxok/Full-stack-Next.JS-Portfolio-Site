@@ -22,8 +22,8 @@
 	},
 	"Experience": {
 		"title": "Ervaring",
-		"1": "Ik werk al meer dan {years} jaar in de IT-sector en heb ervaring opgedaan met projecten op het gebied van High Performance Computing (HPC), webontwikkeling en UI/UX-design.",
-		"2": "Momenteel studeer ik aan de Technische Universiteit van Wrocław, waar ik mijn kennis van informatica en moderne technologieën verder uitbreid. Meer details over mijn professionele achtergrond vind je op mijn LinkedIn-profiel.",
+		"1": "Ik werk al meer dan <highlight>{years} jaar</highlight> in de IT-sector en heb ervaring opgedaan met projecten op het gebied van High Performance Computing (HPC), webontwikkeling en UI/UX-design.",
+		"2": "Momenteel studeer ik aan de <highlight>Technische Universiteit van Wrocław</highlight>, waar ik mijn kennis van informatica en moderne technologieën verder uitbreid. Meer details over mijn professionele achtergrond vind je op mijn LinkedIn-profiel.",
 		"LinkedinButton": "Gedetailleerde informatie op mijn"
 	},
 	"Portfolio": {

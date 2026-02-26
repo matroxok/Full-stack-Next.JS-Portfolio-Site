@@ -1,3 +1,7 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
+
 export interface PortfolioItem {
 	items: { tech?: string; title: string; secondtitle?: string; description?: string; image?: string; href?: string }[]
 }
@@ -6,7 +10,7 @@ export const portfolio: PortfolioItem[] = [
 	{
 		items: [
 			{
-				tech: 'Next.js TailwindCSS Vercel Resend',
+				tech: 'Next.js TailwindCSS Vercel Resend i18n ZOD pnpm',
 				title: 'matrox.dev',
 				description: 'Personal landing page',
 				image: '/assets/projects/matrox_dev_matroxdev.png',
@@ -21,16 +25,16 @@ export const portfolio: PortfolioItem[] = [
 				title: 'HealthyBox.be',
 				description: 'Food Order Full-Stack App',
 				image: '/assets/projects/matrox_dev_healthybox.png',
-				href: 'https://healthybox.be',
+				// href: 'https://healthybox.be',
 			},
 		],
 	},
 	{
 		items: [
 			{
-				// tech: 'soon',
+				tech: 'Next.js PostgreSQL TailwindCSS IIIF-Viewer CI/CD Prisma Docker NextAuth goofys RESTAPI S3 npm',
 				title: 'soon',
-				// description: 'soon',
+				description: 'soon',
 				image: '/assets/projects/matrox_dev_in_progress.png',
 				// href: 'null',
 			},
