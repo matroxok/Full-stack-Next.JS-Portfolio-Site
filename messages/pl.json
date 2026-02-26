@@ -6,7 +6,38 @@
 		"portfolio": "Portfolio",
 		"contact": "Kontakt"
 	},
-	"HomePage": {
-		"title": "Witaj Swiecie"
+	"Hero": {
+		"hello": "Cześć, jestem Mateusz 👋",
+		"subtitle": "full stack web developer & ui/ux designer",
+		"title": "Twój pomysł, moja realizacja,",
+		"title2": "wspólny sukces.",
+		"description": "W świecie w, którym tylko nasza wyobraźnia jest limitem nic nie jest nie możliwe. Każdy projekt, który realizuje traktuję jako szansę na rozwój, rozmowę i naukę noiwych rzeczy. Każdy projekt tgraktuję indywiadulanie i staram się zrealizować zadanie tak jak sam bym tego oczekiwał, dlatego wkrocz razem ze mną do świata cyfrowej rewolucji i nie pozwól, aby konlkurencja Cię wyprzedziła. Razem możemy stowrzyć rozwiązania, które naprawdę zrobią róznicę i pozwolą Ci osiągnąć sukces!",
+		"buttonCV": "Moje CV",
+		"buttonContact": "Kontakt"
+	},
+	"About": {
+		"title": "Trochę o mnie...",
+		"description": "Tak jak wcześniej wspomniałem, nazywam się Mateusz i jestem osobą, która zawsze próboje dążyć do perfekcji - wierzę że ambiocje i determinacja są kluczem do rozwoju i sukcesu. Programowanie czy samo IT nie jest tylko dlka mnie pracą, to coś co naprawdę lubię i co sprawia mi dużą satyfakcji. Zawsze uważałem (i nadal uważam), że nauka nie zależnie od dziedziny czy zawodu nigdy się nie kończy i trzeba byc otwartym na nowe doświadczenia, naukę i perspektywy. Jestem duszą towarzystwa i bardzo lubię otaczać się ludźmi, nie zależnie od poglądów czy zainteresowań. W życiu kieruję się zasadą, że każdy zasługuje na szacunek i zrozumienie, a różnorodność jest czymś, co naprawdę cenię. W wolnych chwilach lubię oddać się rozgryhwce w Counter-Srike 2 (choć osobiście uważam, że CS:GO był lepszy :P), spotakć się ze znjaomymi, czy po prostu spędzić czas z rodziną - więc nie tylko prącą człowiek żyje :)",
+		"city": "Wrocław, Warszawa - Polska"
+	},
+	"Experience": {
+		"title": "Doświadczenie",
+		"1": "W branży IT pracuję od ponad {years} lat, zdobywając doświadczenie w projektach z zakresu High Performance Computing (HPC), WEB Developmentu, a także w obszarze UI/UX Designu i konteneryzacji.",
+		"3": "Dodatkowo, jestem w trakcie realizacji studiów inżynierskich na Politechnice Wrocławskiej, gdzie rozwijam swoje umiejętności i poszerzam wiedzę z zakresu informatyki.",
+		"LinkedinButton": "Szczególne informacje na moim"
+	},
+	"Portfolio": {
+		"title": "Portfolio",
+		"matroxDev": "Moja strona, na której własnie jesteś!",
+		"HealthyBox": "Aplikacja SaaS w skład w, której wchodzi: panel klienta, panel administratora, system zamówień, system płatności, system powiadomień oraz Landing Page. Projekt ten został stworzony dla Belgijskiego startupu kateringu dietetycznego.",
+		"Atlas Sknaów Medycznych": "Aplikacja SaaS, do wyświetlania oraz prezentowania skanów histologicznych, bez starty jakości zdjęci, z możliwością dodawnia opisów, kategorii. Projekt ten zsotał stworzony dla Wydziału Medycznego Politechniki Wrocławskiej."
+	},
+	"Contact": {
+		"title": "Kontakt",
+		"description": "Jeśli masz pytania, chcesz porozmawiać skontaktuj się ze mną za pomocą poniższego formularza lub pod adresem email",
+		"name": "Imię",
+		"email": "Email",
+		"message": "Wiadomość",
+		"button": "Wyślij wiadomość"
 	}
 }

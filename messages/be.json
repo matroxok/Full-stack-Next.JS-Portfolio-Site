@@ -1,5 +1,43 @@
 {
-	"HomePage": {
-		"title": "Hallo"
+	"Navbar": {
+		"home": "Home",
+		"about": "Over mij",
+		"experience": "Ervaring",
+		"portfolio": "Portfolio",
+		"contact": "Contact"
+	},
+	"Hero": {
+		"hello": "Hi, ik ben Mateusz 👋",
+		"subtitle": "Full Stack Web Developer & UI/UX Designer",
+		"title": "Jouw idee, mijn uitvoering,",
+		"title2": "Ons succes.",
+		"description": "In een wereld waarin verbeelding de grenzen bepaalt, is niets onmogelijk. Elk project is een kans om te groeien, ervaringen te delen en nieuwe dingen te leren. Elke realisatie brengt ons dichter bij perfectie. Stap in de wereld van digitale innovatie en laat je concurrentie niet vooroplopen. Samen kunnen we oplossingen creëren die echt het verschil maken.",
+		"buttonCV": "Mijn CV",
+		"buttonContact": "Contact"
+	},
+	"About": {
+		"title": "Over mij...",
+		"description": "Hi, ik ben Mateusz — iemand die altijd heeft geloofd dat ambitie en doorzettingsvermogen de sleutel zijn tot groei. Programmeren is niet alleen mijn beroep — het is iets wat mij echte voldoening en plezier geeft 👨‍💻. Ik geloof dat leren nooit stopt 🧠. Elk gesprek, elke gedeelde ervaring en elk project biedt een kans om te groeien en nieuwe perspectieven te ontdekken. In mijn vrije tijd speel ik Counter-Strike, houd ik mij bezig met car detailing en creëer ik video's, animaties en digitale grafieken — manieren om mijn creativiteit te uiten.",
+		"city": "Wrocław, Warschau - Polen"
+	},
+	"Experience": {
+		"title": "Ervaring",
+		"1": "Ik werk al meer dan {years} jaar in de IT-sector en heb ervaring opgedaan met projecten op het gebied van High Performance Computing (HPC), webontwikkeling en UI/UX-design.",
+		"3": "Momenteel studeer ik aan de Technische Universiteit van Wrocław, waar ik mijn kennis van informatica en moderne technologieën verder uitbreid. Meer details over mijn professionele achtergrond vind je op mijn LinkedIn-profiel.",
+		"LinkedinButton": "Gedetailleerde informatie op mijn"
+	},
+	"Portfolio": {
+		"title": "Portfolio",
+		"matroxDev": "Mijn persoonlijke website waar je je momenteel bevindt!",
+		"HealthyBox": "SaaS-applicatie met klantpaneel, beheerderspaneel, bestelsysteem, betalingssysteem, notificatiesysteem en landingpagina. Dit project werd ontwikkeld voor een Belgische startup in dieetcatering.",
+		"Atlas Sknaów Medycznych": "SaaS-applicatie voor het weergeven en presenteren van histologische scans zonder kwaliteitsverlies, met mogelijkheid om beschrijvingen en categorieën toe te voegen. Dit project werd ontwikkeld voor de Medische Faculteit van de Technische Universiteit van Wrocław."
+	},
+	"Contact": {
+		"title": "Blijf in contact",
+		"description": "Hulp nodig? Gebruik het onderstaande formulier of stuur mij een e-mail naar",
+		"name": "Naam",
+		"email": "E-mail",
+		"message": "Bericht",
+		"button": "Bericht verzenden"
 	}
 }

@@ -31,6 +31,7 @@
     "motion": "^12.34.3",
     "next": "16.1.6",
     "next-intl": "^4.8.3",
+    "radix-ui": "^1.4.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-email": "^4.3.2",
@@ -44,7 +45,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.4",
     "@tailwindcss/postcss": "^4.2.1",
-    "@types/node": "^20.19.33",
+    "@types/node": "^20.19.35",
     "@types/nodemailer": "^7.0.11",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",

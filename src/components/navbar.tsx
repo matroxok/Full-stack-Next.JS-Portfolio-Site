@@ -15,6 +15,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import { LanguageMenu } from './ui/languageMenu'
 
 export function Nav() {
 	const t = useTranslations('Navbar')
@@ -48,13 +49,16 @@ export function Nav() {
 					<NavbarLogo />
 					<NavItems className="text-lg" items={navItems} />
 					<div className="flex items-center gap-4">
-						<Link
-							href="#contact-form"
-							scroll={true}
-							className="relative z-50 pointer-events-auto bg-[#171717] text-white flex items-center justify-center gap-2 hover:bg-[#374151] focus:outline-none focus:ring-0 active:outline-none no-underline rounded-md px-4 py-2 transition-colors duration-200">
-							<Image src="/message-dollar.svg" alt="" width={20} height={20} />
-							{t('contact')}
-						</Link>
+						<div className="flex items-center gap-2">
+							<LanguageMenu />
+							<Link
+								href="#contact-form"
+								scroll={true}
+								className="relative z-50 pointer-events-auto bg-[#171717] text-white flex items-center justify-center gap-2 hover:bg-[#374151] rounded-md px-4 py-2 transition-colors duration-200">
+								<Image src="/message-dollar.svg" alt="" width={20} height={20} />
+								{t('contact')}
+							</Link>
+						</div>
 					</div>
 				</NavBody>
 
@@ -62,9 +66,12 @@ export function Nav() {
 				<MobileNav>
 					<MobileNavHeader>
 						<NavbarLogo />
-						<MobileNavToggle isOpen={isMobileMenuOpen} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
-					</MobileNavHeader>
 
+						<div className="flex items-center gap-2">
+							<LanguageMenu />
+							<MobileNavToggle isOpen={isMobileMenuOpen} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
+						</div>
+					</MobileNavHeader>
 					<MobileNavMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)}>
 						{navItems.map((item, idx) => (
 							<a
