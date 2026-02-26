@@ -22,8 +22,8 @@
 	},
 	"Experience": {
 		"title": "Doświadczenie",
-		"1": "W branży IT pracuję od ponad {years} lat, zdobywając doświadczenie w projektach z zakresu High Performance Computing (HPC), WEB Developmentu, a także w obszarze UI/UX Designu i konteneryzacji.",
-		"3": "Dodatkowo, jestem w trakcie realizacji studiów inżynierskich na Politechnice Wrocławskiej, gdzie rozwijam swoje umiejętności i poszerzam wiedzę z zakresu informatyki.",
+		"1": "W branży IT pracuję od ponad <highlight>{years} lat</highlight>, zdobywając doświadczenie w projektach z zakresu High Performance Computing (HPC), Web Developmentu, a także w obszarze UI/UX Designu i konteneryzacji.",
+		"2": "Dodatkowo, jestem w trakcie realizacji studiów inżynierskich na <highlight>Politechnice Wrocławskiej</highlight>, gdzie rozwijam swoje umiejętności i poszerzam wiedzę z zakresu informatyki.",
 		"LinkedinButton": "Szczególne informacje na moim"
 	},
 	"Portfolio": {
