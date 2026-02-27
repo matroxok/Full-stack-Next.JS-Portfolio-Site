@@ -1,7 +1,5 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
-
 export interface PortfolioItem {
 	items: { tech?: string; title: string; secondtitle?: string; description?: string; image?: string; href?: string }[]
 }
