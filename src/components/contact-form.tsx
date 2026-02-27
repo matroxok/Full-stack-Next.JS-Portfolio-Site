@@ -4,7 +4,8 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { contactSchema, type contactInput } from '@/zod/schema'
-import { useTransition, useState } from 'react'
+import { useTransition, useState, use } from 'react'
+import { useTranslations } from 'next-intl'
 
 import ReCAPTCHA from 'react-google-recaptcha'
 import { useRef } from 'react'
@@ -25,6 +26,8 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 
 	const recaptchaRef = useRef<ReCAPTCHA | null>(null)
 	const [captchaToken, setCaptchaToken] = useState<string | null>(null)
+
+	const t = useTranslations('Contact')
 
 	const {
 		register,
@@ -93,7 +96,7 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 					</div>
 				</div>
 				<div className="flex flex-col justify-center items-center gap-10 w-auto h-auto lg:p-10 border-dashed border-3 border-[#161616]">
-					<p className="uppercase font-bold text-xl lg:text-4xl">stay in touch</p>
+					<p className="uppercase font-bold text-xl lg:text-4xl">{t('title')}</p>
 
 					<div className="w-auto h-auto flex justify-between lg:justify-center items-center lg:gap-6">
 						<Avatar>
@@ -101,12 +104,12 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 							<AvatarFallback>matrox.dev</AvatarFallback>
 						</Avatar>
 						<p className="lg:text-center font-light text-xs lg:text-md lg:border-2 rounded-lg border-[#5A5A5A] p-4">
-							Need help?{' '}
+							{/* Need help?{' '}
 							<span className="lg:hidden">
 								<br />
-							</span>{' '}
-							Use the form below or email me at <br />
-							<span className="font-semibold block lg:inline-block mt-2 lg:mt-0">mateusz.kozera@matrox.dev</span>
+							</span>{' '} */}
+							{t('description')} <br />
+							<span className="font-semibold block lg:inline-block mt-2">mateusz.kozera@matrox.dev</span>
 						</p>
 					</div>
 
@@ -118,7 +121,7 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 						<div className="w-full flex flex-col">
 							<div className="flex flex-col gap-1">
 								<label className="font-light text-sm text-[#CCC6C6]" htmlFor="name">
-									Name
+									{t('name')}
 								</label>
 								<input
 									id="name"
@@ -134,7 +137,7 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 						<div className="w-full flex flex-col">
 							<div className="flex flex-col gap-1">
 								<label className="font-light text-sm text-[#CCC6C6]" htmlFor="email">
-									Email
+									{t('email')}
 								</label>
 								<input
 									id="email"
@@ -150,7 +153,7 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 						<div className="w-full flex flex-col">
 							<div className="flex flex-col gap-1">
 								<label className="font-light text-sm text-[#CCC6C6]" htmlFor="message">
-									Message
+									{t('message')}
 								</label>
 								<textarea
 									id="message"

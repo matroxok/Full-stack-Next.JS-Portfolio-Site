@@ -22,10 +22,9 @@ export default function Portfolio({ data }: { data: PortfolioItem[] }) {
 				<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 py-16">
 					{data.map((group, gi) =>
 						group.items.map((item, ii) => {
-							// KLUCZ: staramy się, by był stabilny
 							const key = `${item.title}-${item.href ?? ii}-${gi}`
 							return <PortfolioCard key={key} item={item} />
-						})
+						}),
 					)}
 				</div>
 			</div>
