@@ -40,7 +40,7 @@ export default function Expirience() {
 	}
 
 	return (
-		<div id="expirience" className="w-full h-auto px-5 lg:px-0 bg-[#171717]">
+		<div id="experience" className="w-full h-auto px-5 lg:px-0 bg-[#171717]">
 			<div className="container mx-auto pt-16">
 				<div className="flex flex-col">
 					<div className="flex justify-end">

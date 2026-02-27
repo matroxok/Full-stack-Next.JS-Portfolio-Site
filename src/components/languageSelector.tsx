@@ -33,7 +33,9 @@ export default function LanguageSelector({ onSelect }: { onSelect?: () => void }
 					key={lang.code}
 					onClick={() => handleChange(lang.code)}
 					className={`flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-colors ${
-						locale === lang.code ? 'bg-gray-200 dark:bg-neutral-800' : 'hover:bg-gray-100 dark:hover:bg-neutral-900'
+						locale === lang.code
+							? 'bg-sky-300/70 text-black/80 font-semibold dark:bg-neutral-800'
+							: 'hover:bg-gray-100/10 dark:hover:bg-neutral-900 cursor-pointer'
 					}`}>
 					<Image src={lang.flag} alt={lang.label} width={20} height={20} />
 					{lang.label}
