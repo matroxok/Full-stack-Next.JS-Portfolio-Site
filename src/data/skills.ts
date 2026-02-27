@@ -9,18 +9,32 @@ export const skills: Skill[] = [
 			{ name: 'Next.js', href: 'https://nextjs.org/' },
 			{ name: 'React', href: 'https://react.dev/' },
 			{ name: 'Node.js', href: 'https://nodejs.org/' },
-			{ name: 'Express.js', href: 'https://expressjs.com/' },
+			{ name: 'TypeScript', href: 'https://www.typescriptlang.org/' },
 			{ name: 'Python', href: 'https://www.python.org/' },
 			{ name: 'C++', href: 'https://isocpp.org/' },
 		],
 	},
 	{
-		items: [{ name: 'REST APIs' }, { name: 'Docker', href: 'https://www.docker.com/' }],
+		items: [
+			{ name: 'IN PROGRESS: ' },
+			{ name: 'Django', href: 'https://www.djangoproject.com/' },
+			{ name: 'GO', href: 'https://go.dev/' },
+			{ name: 'reactnative', href: 'https://reactnative.dev/' },
+		],
+	},
+	{
+		items: [
+			{ name: 'REST APIs' },
+			{ name: 'Docker', href: 'https://www.docker.com/' },
+			{ name: 'CI/CD' },
+			{ name: 'Microservices' },
+		],
 	},
 	{
 		items: [
 			{ name: 'Git', href: 'https://git-scm.com/' },
 			{ name: 'GitHub', href: 'https://github.com/' },
+			{ name: 'GitLab', href: 'https://gitlab.com/' },
 			{ name: 'Postman', href: 'https://www.postman.com/' },
 			{ name: 'Bash', href: 'https://www.gnu.org/software/bash/' },
 		],

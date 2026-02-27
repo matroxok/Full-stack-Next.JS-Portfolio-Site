@@ -1,3 +1,5 @@
+'use client'
+
 export interface PortfolioItem {
 	items: { tech?: string; title: string; secondtitle?: string; description?: string; image?: string; href?: string }[]
 }
@@ -6,7 +8,7 @@ export const portfolio: PortfolioItem[] = [
 	{
 		items: [
 			{
-				tech: 'Next.js TailwindCSS Vercel Resend',
+				tech: 'Next.js TailwindCSS Vercel Resend i18n ZOD pnpm',
 				title: 'matrox.dev',
 				description: 'Personal landing page',
 				image: '/assets/projects/matrox_dev_matroxdev.png',
@@ -21,18 +23,18 @@ export const portfolio: PortfolioItem[] = [
 				title: 'HealthyBox.be',
 				description: 'Food Order Full-Stack App',
 				image: '/assets/projects/matrox_dev_healthybox.png',
-				href: 'https://healthybox.be',
+				href: 'https://matrox.dev',
 			},
 		],
 	},
 	{
 		items: [
 			{
-				// tech: 'soon',
-				title: 'soon',
-				// description: 'soon',
-				image: '/assets/projects/matrox_dev_in_progress.png',
-				// href: 'null',
+				tech: 'Next.js PostgreSQL TailwindCSS IIIF-Viewer CI/CD Prisma Docker NextAuth goofys RESTAPI S3minio npm',
+				title: 'Atlas of Medical Scans',
+				description: 'Atlas of Medical Scnas for Facuty of Medicinice Wroclaw University of Science and Technology.',
+				image: '/assets/projects/matrox_dev_atlas_skanow.png',
+				href: 'https://wmed.pwr.edu.pl',
 			},
 		],
 	},

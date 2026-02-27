@@ -1,0 +1,43 @@
+{
+	"Navbar": {
+		"home": "Startseite",
+		"about": "Über mich",
+		"experience": "Erfahrung",
+		"portfolio": "Portfolio",
+		"contact": "Kontakt"
+	},
+	"Hero": {
+		"hello": "Hi, ich bin Mateusz 👋",
+		"subtitle": "Full Stack Webentwickler & UI/UX Designer",
+		"title": "Deine Idee, meine Umsetzung",
+		"title2": "unser Erfolg.",
+		"description": "In einer Welt, in der Vorstellungskraft die Grenzen setzt, ist nichts unmöglich. Jedes Projekt ist eine Chance zu wachsen, sich auszutauschen und Neues zu lernen. Jede Umsetzung bringt uns der Perfektion näher. Tauche ein in die digitale Revolution und lass deine Konkurrenz nicht vorausgehen. Gemeinsam können wir Lösungen schaffen, die wirklich einen Unterschied machen.",
+		"buttonCV": "Mein Lebenslauf",
+		"buttonContact": "Kontakt"
+	},
+	"About": {
+		"title": "Über mich...",
+		"description": "Hi, ich bin Mateusz — jemand, der immer daran geglaubt hat, dass Ehrgeiz und Entschlossenheit der Schlüssel zur Weiterentwicklung sind. Programmieren ist nicht nur mein Beruf — es ist etwas, das mir echte Freude und Zufriedenheit bereitet 👨‍💻. Ich bin überzeugt, dass Lernen niemals endet 🧠. Jedes Gespräch, jede gemeinsame Erfahrung und jedes Projekt bietet die Möglichkeit zu wachsen und neue Perspektiven zu entdecken. In meiner Freizeit spiele ich Counter-Strike, beschäftige mich mit Auto-Detailing sowie der Erstellung von Videos, Animationen und digitalen Grafiken — kreative Ausdrucksformen, die mich inspirieren.",
+		"city": "Wrocław, Warschau – Polen"
+	},
+	"Experience": {
+		"title": "Erfahrung",
+		"1": "Ich arbeite seit über <highlight>{years} Jahren</highlight> in der IT-Branche und habe Erfahrung in Projekten aus den Bereichen High Performance Computing (HPC), Webentwicklung und UI/UX-Design gesammelt.",
+		"2": "Derzeit studiere ich an der <highlight>Technischen Universität Wrocław</highlight>, wo ich mein Wissen in Informatik und modernen Technologien weiter ausbaue. Weitere Details zu meinem beruflichen Werdegang findest du auf meinem LinkedIn-Profil.",
+		"LinkedinButton": "Detaillierte Informationen auf meinem"
+	},
+	"Portfolio": {
+		"title": "Portfolio",
+		"matroxDev": "Meine persönliche Website, auf der du dich gerade befindest!",
+		"HealthyBox": "SaaS-Anwendung mit Kundenpanel, Adminpanel, Bestellsystem, Zahlungssystem, Benachrichtigungssystem sowie Landing Page. Dieses Projekt wurde für ein belgisches Startup im Bereich Catering entwickelt.",
+		"Atlas Sknaów Medycznych": "SaaS-Anwendung zur Anzeige und Präsentation histologischer Scans ohne Qualitätsverlust, mit der Möglichkeit, Beschreibungen und Kategorien hinzuzufügen. Dieses Projekt wurde für die Medizinische Fakultät der Technischen Universität Wrocław entwickelt."
+	},
+	"Contact": {
+		"title": "Kontakt aufnehmen",
+		"description": "Brauchst du Hilfe? Nutze das untenstehende Formular oder schreibe mir eine E-Mail an",
+		"name": "Name",
+		"email": "E-Mail",
+		"message": "Nachricht",
+		"button": "Nachricht senden"
+	}
+}
