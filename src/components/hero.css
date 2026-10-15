@@ -1,5 +1,7 @@
-.hero {
-	animation: float 5s ease-in-out infinite;
+@media (prefers-reduced-motion: no-preference) {
+	.hero {
+		animation: float 5s ease-in-out infinite;
+	}
 }
 
 @keyframes float {

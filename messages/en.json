@@ -1,4 +1,10 @@
 {
+	"Metadata": {
+		"title": "Mateusz Kozera | Full Stack Developer & UI/UX | matrox.dev",
+		"description": "Mateusz Kozera, Full Stack Web Developer and UI/UX Designer from Wrocław, Poland. Experienced in HPC and Next.js, studying at Wrocław University of Science and Technology.",
+		"ogTitle": "Mateusz Kozera, Full Stack Web Developer & UI/UX Designer",
+		"ogDescription": "Portfolio, experience and contact. Web development, UI/UX and High Performance Computing (HPC) in Wrocław, Poland."
+	},
 	"Navbar": {
 		"home": "Home",
 		"about": "About",
@@ -9,35 +15,59 @@
 	"Hero": {
 		"hello": "Hi, I'm Mateusz 👋",
 		"subtitle": "full stack web developer & ui/ux designer",
-		"title": "Your idea, My execution,",
-		"title2": "Our success.",
-		"description": "In a world where imagination sets the limits — nothing is impossible. Every project is an opportunity for growth, conversation, and learning, and each realization brings us closer to perfection. Step into the world of digital revolution and don’t let your competition get ahead. Together, we can create solutions that truly make a difference.",
+		"title": "Your idea, my execution,",
+		"title2": "our success.",
+		"description": "In a world where imagination sets the limits, nothing is impossible. Every project is an opportunity for growth, conversation and learning, and each one brings us closer to perfection. Step into the world of the digital revolution and don't let your competition get ahead. Together, we can create solutions that truly make a difference.",
 		"buttonCV": "My CV",
 		"buttonContact": "Contact"
 	},
 	"About": {
-		"title": "About Me...",
-		"description": "Hi, I'm Mateusz — a person who has always believed that ambition and determination are the keys to growth. Programming isn't just mprofession — it's something that genuinely brings me joy and satisfaction 👨‍💻. I believe that learning never truly ends 🧠. Every conversation, every shared experience, and every project is a chance to grow and see things from a new perspective. In my free time, I enjoy playing Counter-Strike, working on car detailing, and creating videos, animations, and digital graphics — all of which allow me to express creativity in different forms.",
-		"city": "Wrocław - Poland"
+		"title": "About me...",
+		"description": "Hi, I'm Mateusz, a person who has always believed that ambition and determination are the keys to growth. Programming isn't just my profession; it's something that genuinely brings me joy and satisfaction 👨‍💻. I believe that learning never truly ends 🧠. Every conversation, every shared experience and every project is a chance to grow and see things from a new perspective. In my free time, I enjoy playing Counter-Strike, car detailing and creating videos, animations and digital graphics, all of which let me express my creativity in different ways.",
+		"city": "Wrocław - Poland",
+		"photoAlt": "Mateusz \"matroxok\" Kozera at the National Stadium in Warsaw",
+		"photoCaption": "Trip to the National Stadium of Poland",
+		"photoPlace": "09.11.2024, Warsaw"
 	},
 	"Experience": {
 		"title": "Experience",
-		"1": "I've been working in the IT industry for over <highlight>{years} years</highlight>, gaining experience in projects related to High Performance Computing (HPC), WEB Development, and UI/UX Design.",
-		"2": "I'm currently studying at <highlight>Wrocław University of Science and Technology</highlight>, where I continue to expand my knowledge in computer science and modern technologies. You can find more details about my professional background on my LinkedIn profile.",
+		"1": "I've been working in the IT industry for over <highlight>{years} years</highlight>, gaining experience in projects related to High Performance Computing (HPC), web development and UI/UX design.",
+		"2": "I'm currently studying at <highlight>Wrocław University of Science and Technology</highlight>, where I continue to expand my knowledge of computer science and modern technologies. You can find more details about my professional background on my LinkedIn profile.",
+		"yearsLabel": "years in IT",
 		"LinkedinButton": "Detailed information on my"
+	},
+	"Skills": {
+		"title": "Skills",
+		"frontend": "Frontend & languages",
+		"learning": "Currently learning",
+		"backend": "Backend & DevOps",
+		"tools": "Tools",
+		"design": "UI & design",
+		"os": "Systems"
 	},
 	"Portfolio": {
 		"title": "Portfolio",
-		"matroxDev": "My personal webiste, wchich you are currently on!",
-		"HealthyBox": "Application SaaS, which includes: client panel, admin panel, order system, payment system, notification system and Landing Page. This project was created for Belgian dietary catering startup.",
-		"Atlas Sknaów Medycznych": "Application SaaS, for displaying and presenting histological scans, without losing quality of photos, with possibility of adding descriptions, categories. This project was created for Medical Faculty of Wrocław University of Science and Technology."
+		"check": "check",
+		"soon": "soon",
+		"matroxDev": "My personal website, which you are currently on!",
+		"HealthyBox": "SaaS application that includes a client panel, admin panel, order system, payment system, notification system and a landing page. This project was created for a Belgian dietary catering startup.",
+		"AtlasScans": "SaaS application for displaying and presenting histological scans without any loss of image quality, with the ability to add descriptions and categories. This project was created for the Faculty of Medicine of Wrocław University of Science and Technology.",
+		"DTIControl": "Landing page for DTIControl.pl, a Polish construction company with over 20 years of experience in the industry."
 	},
 	"Contact": {
 		"title": "Stay in touch",
-		"description": "Need help? Use the form below or email me at",
+		"description": "Have a question? Use the form below or email me at",
 		"name": "Name",
+		"namePlaceholder": "Your name",
 		"email": "Email",
 		"message": "Message",
-		"button": "Send message"
+		"messagePlaceholder": "Your message...",
+		"button": "Send message",
+		"sending": "Sending...",
+		"captcha": "Please confirm the reCAPTCHA."
+	},
+	"Footer": {
+		"rights": "All rights reserved.",
+		"backToTop": "Back to top"
 	}
 }

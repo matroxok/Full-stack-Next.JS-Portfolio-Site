@@ -1,0 +1,54 @@
+'use client'
+
+import { useState } from 'react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
+import { Nav } from '@/components/navbar'
+import Hero from '@/components/hero'
+import About from '@/components/about'
+import Expirience from '@/components/expirience'
+import ContactForm from '@/components/contact-form'
+import Skills from '@/components/skills'
+import Portfolio from '@/components/portfolio'
+import Footer from '@/components/footer'
+import { portfolio } from '@/data/portfolio'
+
+import TerminalWindow from '@/components/ui/succesTerminal'
+
+export default function Home() {
+	const [showTerminal, setShowTerminal] = useState(false)
+
+	const handleCloseTerminal = () => {
+		setShowTerminal(false)
+	}
+
+	const handleSuccess = () => {
+		setShowTerminal(true)
+	}
+
+	return (
+		<>
+			{showTerminal && (
+				<div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-xs bg-black/80 transition-opacity duration-300">
+					<TerminalWindow onClose={handleCloseTerminal} />
+				</div>
+			)}
+			<div className="text-white w-full h-full">
+				<header className="sticky mt-5 top-0 z-100">
+					<Nav></Nav>
+				</header>
+				<main>
+					<Hero></Hero>
+					<About></About>
+					<div className="w-full border-t border-dotted border-[#D4D4D4]"></div>
+					<Expirience></Expirience>
+					<Skills></Skills>
+					<Portfolio data={portfolio}></Portfolio>
+					<ContactForm onSuccess={handleSuccess}></ContactForm>
+				</main>
+				<Footer />
+				<SpeedInsights />
+			</div>
+		</>
+	)
+}

@@ -1,4 +1,10 @@
 {
+	"Metadata": {
+		"title": "Mateusz Kozera | Full Stack Developer i UI/UX | matrox.dev",
+		"description": "Mateusz Kozera, Full Stack Web Developer i UI/UX Designer z Wrocławia. Doświadczenie w HPC i Next.js, student Politechniki Wrocławskiej. Zobacz moje projekty.",
+		"ogTitle": "Mateusz Kozera, Full Stack Web Developer i UI/UX Designer",
+		"ogDescription": "Portfolio, doświadczenie i kontakt. Web development, UI/UX oraz High Performance Computing (HPC) we Wrocławiu."
+	},
 	"Navbar": {
 		"home": "Home",
 		"about": "O mnie",
@@ -11,33 +17,57 @@
 		"subtitle": "full stack web developer & ui/ux designer",
 		"title": "Twój pomysł, moja realizacja,",
 		"title2": "nasz sukces.",
-		"description": "W świecie w, którym tylko nasza wyobraźnia jest limitem nic nie jest nie możliwe. Każdy projekt, który realizuje traktuję jako szansę na rozwój, rozmowę i naukę noiwych rzeczy. Każdy projekt tgraktuję indywiadulanie i staram się zrealizować zadanie tak jak sam bym tego oczekiwał, dlatego wkrocz razem ze mną do świata cyfrowej rewolucji i nie pozwól, aby konlkurencja Cię wyprzedziła. Razem możemy stowrzyć rozwiązania, które naprawdę zrobią róznicę i pozwolą Ci osiągnąć sukces!",
+		"description": "W świecie, w którym jedynym ograniczeniem jest wyobraźnia, nic nie jest niemożliwe. Każdy projekt, który realizuję, traktuję jako szansę na rozwój, rozmowę i naukę nowych rzeczy. Do każdego zlecenia podchodzę indywidualnie i wykonuję je tak, jak sam chciałbym, żeby zostało wykonane. Wkrocz razem ze mną do świata cyfrowej rewolucji i nie pozwól, aby konkurencja Cię wyprzedziła. Razem stworzymy rozwiązania, które naprawdę zrobią różnicę i pozwolą Ci osiągnąć sukces!",
 		"buttonCV": "Moje CV",
 		"buttonContact": "Kontakt"
 	},
 	"About": {
 		"title": "Trochę o mnie...",
-		"description": "Tak jak wcześniej wspomniałem, nazywam się Mateusz i jestem osobą, która zawsze próboje dążyć do perfekcji - wierzę że ambiocje i determinacja są kluczem do rozwoju i sukcesu. Programowanie czy samo IT nie jest tylko dlka mnie pracą, to coś co naprawdę lubię i co sprawia mi dużą satyfakcji. Zawsze uważałem (i nadal uważam), że nauka nie zależnie od dziedziny czy zawodu nigdy się nie kończy i trzeba byc otwartym na nowe doświadczenia, naukę i perspektywy. Jestem duszą towarzystwa i bardzo lubię otaczać się ludźmi, nie zależnie od poglądów czy zainteresowań. W życiu kieruję się zasadą, że każdy zasługuje na szacunek i zrozumienie, a różnorodność jest czymś, co naprawdę cenię. W wolnych chwilach lubię oddać się rozgryhwce w Counter-Srike 2 (choć osobiście uważam, że CS:GO był lepszy :P), spotakć się ze znjaomymi, czy po prostu spędzić czas z rodziną - więc nie tylko prącą człowiek żyje :)",
-		"city": "Wrocław - Polska"
+		"description": "Jak już wspomniałem, nazywam się Mateusz i zawsze dążę do perfekcji. Wierzę, że ambicja i determinacja są kluczem do rozwoju i sukcesu. Programowanie i IT to dla mnie nie tylko praca, ale coś, co naprawdę lubię i co daje mi ogromną satysfakcję. Zawsze uważałem (i nadal uważam), że nauka, niezależnie od dziedziny czy zawodu, nigdy się nie kończy i trzeba być otwartym na nowe doświadczenia i perspektywy. Jestem duszą towarzystwa i bardzo lubię otaczać się ludźmi, niezależnie od ich poglądów czy zainteresowań. W życiu kieruję się zasadą, że każdy zasługuje na szacunek i zrozumienie, a różnorodność jest czymś, co naprawdę cenię. W wolnych chwilach lubię zagrać w Counter-Strike 2 (choć osobiście uważam, że CS:GO był lepszy :P), spotkać się ze znajomymi albo po prostu spędzić czas z rodziną. W końcu nie samą pracą człowiek żyje :)",
+		"city": "Wrocław - Polska",
+		"photoAlt": "Mateusz „matroxok” Kozera na Stadionie Narodowym w Warszawie",
+		"photoCaption": "Wizyta na Stadionie Narodowym",
+		"photoPlace": "09.11.2024, Warszawa"
 	},
 	"Experience": {
 		"title": "Doświadczenie",
-		"1": "W branży IT pracuję od ponad <highlight>{years} lat</highlight>, zdobywając doświadczenie w projektach z zakresu High Performance Computing (HPC), Web Developmentu, a także w obszarze UI/UX Designu i konteneryzacji.",
-		"2": "Dodatkowo, jestem w trakcie realizacji studiów inżynierskich na <highlight>Politechnice Wrocławskiej</highlight>, gdzie rozwijam swoje umiejętności i poszerzam wiedzę z zakresu informatyki.",
-		"LinkedinButton": "Szczególne informacje na moim"
+		"1": "W branży IT pracuję od ponad <highlight>{years} lat</highlight>, zdobywając doświadczenie w projektach z zakresu High Performance Computing (HPC) i web developmentu, a także w obszarze UI/UX designu i konteneryzacji.",
+		"2": "Jestem w trakcie studiów inżynierskich na <highlight>Politechnice Wrocławskiej</highlight>, gdzie rozwijam swoje umiejętności i poszerzam wiedzę z zakresu informatyki. Więcej o mojej ścieżce zawodowej znajdziesz na moim profilu LinkedIn.",
+		"yearsLabel": "lat w IT",
+		"LinkedinButton": "Szczegółowe informacje na moim"
+	},
+	"Skills": {
+		"title": "Umiejętności",
+		"frontend": "Frontend i języki",
+		"learning": "Aktualnie się uczę",
+		"backend": "Backend i DevOps",
+		"tools": "Narzędzia",
+		"design": "UI i design",
+		"os": "Systemy"
 	},
 	"Portfolio": {
 		"title": "Portfolio",
-		"matroxDev": "Moja strona, na której własnie jesteś!",
-		"HealthyBox": "Aplikacja SaaS w skład w, której wchodzi: panel klienta, panel administratora, system zamówień, system płatności, system powiadomień oraz Landing Page. Projekt ten został stworzony dla Belgijskiego startupu kateringu dietetycznego.",
-		"Atlas Sknaów Medycznych": "Aplikacja SaaS, do wyświetlania oraz prezentowania skanów histologicznych, bez starty jakości zdjęci, z możliwością dodawnia opisów, kategorii. Projekt ten zsotał stworzony dla Wydziału Medycznego Politechniki Wrocławskiej."
+		"check": "zobacz",
+		"soon": "wkrótce",
+		"matroxDev": "Moja strona, na której właśnie jesteś!",
+		"HealthyBox": "Aplikacja SaaS, w której skład wchodzą: panel klienta, panel administratora, system zamówień, płatności i powiadomień oraz landing page. Projekt powstał dla belgijskiego startupu z branży cateringu dietetycznego.",
+		"AtlasScans": "Aplikacja SaaS do wyświetlania i prezentowania skanów histologicznych bez utraty jakości obrazu, z możliwością dodawania opisów i kategorii. Projekt powstał dla Wydziału Medycznego Politechniki Wrocławskiej.",
+		"DTIControl": "Landing page dla DTIControl.pl, polskiej firmy budowlanej z ponad 20-letnim doświadczeniem w branży."
 	},
 	"Contact": {
 		"title": "Kontakt",
-		"description": "Jeśli masz pytania, chcesz porozmawiać skontaktuj się ze mną za pomocą poniższego formularza lub pod adresem email",
+		"description": "Jeśli masz pytania lub chcesz porozmawiać, skontaktuj się ze mną za pomocą poniższego formularza lub napisz na adres",
 		"name": "Imię",
+		"namePlaceholder": "Twoje imię",
 		"email": "Email",
 		"message": "Wiadomość",
-		"button": "Wyślij wiadomość"
+		"messagePlaceholder": "Twoja wiadomość...",
+		"button": "Wyślij wiadomość",
+		"sending": "Wysyłanie...",
+		"captcha": "Potwierdź, że nie jesteś robotem (reCAPTCHA)."
+	},
+	"Footer": {
+		"rights": "Wszelkie prawa zastrzeżone.",
+		"backToTop": "Do góry"
 	}
 }

@@ -1,10 +1,13 @@
 // skills.ts
 export interface Skill {
+	// key in the `Skills` translation namespace
+	category: 'frontend' | 'learning' | 'backend' | 'tools' | 'design' | 'os'
 	items: { name: string; href?: string }[]
 }
 
 export const skills: Skill[] = [
 	{
+		category: 'frontend',
 		items: [
 			{ name: 'Next.js', href: 'https://nextjs.org/' },
 			{ name: 'HTML 5', href: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5' },
@@ -18,8 +21,8 @@ export const skills: Skill[] = [
 		],
 	},
 	{
+		category: 'learning',
 		items: [
-			{ name: 'IN PROGRESS: ' },
 			{ name: 'Django', href: 'https://www.djangoproject.com/' },
 			{ name: 'GO', href: 'https://go.dev/' },
 			{ name: 'React Native', href: 'https://reactnative.dev/' },
@@ -30,6 +33,7 @@ export const skills: Skill[] = [
 		],
 	},
 	{
+		category: 'backend',
 		items: [
 			{ name: 'REST APIs' },
 			{ name: 'Docker', href: 'https://www.docker.com/' },
@@ -42,6 +46,7 @@ export const skills: Skill[] = [
 		],
 	},
 	{
+		category: 'tools',
 		items: [
 			{ name: 'Git', href: 'https://git-scm.com/' },
 			{ name: 'GitHub', href: 'https://github.com/' },
@@ -52,6 +57,7 @@ export const skills: Skill[] = [
 		],
 	},
 	{
+		category: 'design',
 		items: [
 			{ name: 'shadcn/ui', href: 'https://ui.shadcn.com/' },
 			{ name: 'Tailwind CSS', href: 'https://tailwindcss.com/' },
@@ -60,6 +66,7 @@ export const skills: Skill[] = [
 		],
 	},
 	{
+		category: 'os',
 		items: [
 			{ name: 'Windows', href: 'https://www.microsoft.com/windows/' },
 			{ name: 'Linux', href: 'https://www.linux.org/' },

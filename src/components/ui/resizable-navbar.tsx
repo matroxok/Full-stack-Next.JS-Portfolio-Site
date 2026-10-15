@@ -194,8 +194,8 @@ export const MobileNavToggle = ({ isOpen, onClick }: { isOpen: boolean; onClick:
 
 export const NavbarLogo = () => {
 	return (
-		<a href="#" className="relative z-20 mr-4 flex items-center space-x-2 text-sm font-normal text-black">
-			<Image src="/logo.svg" alt="logo" width={200} height={200} />
+		<a href="#home" aria-label="matrox.dev, home" className="relative z-20 mr-4 flex items-center space-x-2 text-sm font-normal text-black">
+			<Image src="/logo.svg" alt="matrox.dev" width={200} height={200} priority />
 		</a>
 	)
 }

@@ -5,6 +5,7 @@ import { PointerHighlight } from '@/components/ui/pointer-highlight'
 import Link from 'next/link'
 import { AuroraText } from './ui/aurora-text'
 import { useTranslations } from 'next-intl'
+import { AUTHOR } from '@/lib/site'
 
 export const SafariButton = () => {
 	return (
@@ -24,6 +25,10 @@ export default function Hero() {
 	const CvButton = () => {
 		return (
 			<ContactButton
+				as={Link}
+				href={AUTHOR.linkedin}
+				target="_blank"
+				rel="noopener noreferrer me"
 				borderRadius="10px"
 				showMovingBorder={false}
 				className="text-lg bg-green-400 text-white border-none font-bold cursor-pointer">
@@ -33,7 +38,9 @@ export default function Hero() {
 	}
 
 	return (
-		<div className="container px-5 lg:px-0 lg:mx-auto flex justify-around items-start mt-24 w-full h-auto">
+		<section
+			id="home"
+			className="container scroll-mt-32 px-5 lg:px-0 lg:mx-auto flex justify-around items-start mt-24 w-full h-auto">
 			<div className="flex flex-col items-center lg:items-start gap-6 w-full h-auto">
 				<p className="font-semibold text-center lg:text-start text-sm lg:text-md">
 					{t('hello')} <br />
@@ -41,7 +48,7 @@ export default function Hero() {
 						<AuroraText>{t('subtitle')}</AuroraText>
 					</span>
 				</p>
-				<h1 className="flex flex-col items-center lg:items-start gap-1 text-2xl lg:text-4xl font-semibold text-">
+				<h1 className="flex flex-col items-center lg:items-start gap-1 text-2xl lg:text-4xl font-semibold">
 					{t('title')}
 					<br />
 					<div className="font-bold tracking-tight">
@@ -50,7 +57,9 @@ export default function Hero() {
 						</PointerHighlight>
 					</div>
 				</h1>
-				<h2 className="text-center text-md text-neutral-300 lg:text-start max-w-2xl pt-2">{t('description')}</h2>
+				<p className="text-center text-md text-neutral-300 lg:text-start max-w-2xl pt-2 leading-relaxed">
+					{t('description')}
+				</p>
 				<div className="w-full flex justify-around lg:justify-start lg:gap-10 pt-8 lg:mt-2">
 					<CvButton />
 					<ContactButton
@@ -64,6 +73,6 @@ export default function Hero() {
 			<div className="hidden lg:block">
 				<SafariButton />
 			</div>
-		</div>
+		</section>
 	)
 }

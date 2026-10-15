@@ -1,24 +1,20 @@
-import { Martian_Mono } from 'next/font/google'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { contactSchema, type contactInput } from '@/zod/schema'
-import { useTransition, useState, use } from 'react'
+import { useTransition, useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 import ReCAPTCHA from 'react-google-recaptcha'
 import { useRef } from 'react'
+import { martianMono } from '@/lib/fonts'
+import { AUTHOR } from '@/lib/site'
 
 interface ContactFormProps {
 	onSuccess: () => void
 	onError?: (error: string) => void
 }
-
-const martianMono = Martian_Mono({
-	subsets: ['latin'],
-	weight: ['400', '700'],
-})
 
 export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 	const [pending, startTransition] = useTransition()
@@ -45,7 +41,7 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 
 		// captcha check
 		if (!captchaToken) {
-			setStatus({ ok: false, msg: 'Please confirm the reCAPTCHA.' })
+			setStatus({ ok: false, msg: t('captcha') })
 			return
 		}
 		startTransition(async () => {
@@ -80,9 +76,10 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 	}
 
 	return (
-		<div
+		<section
 			id="contact-form"
-			className="w-full h-auto bg-[linear-gradient(180deg,#0A0A0A_0%,rgba(255,255,255,0.01)_2411.5%)] px-5 lg:px-0">
+			aria-labelledby="contact-heading"
+			className="w-full h-auto scroll-mt-24 bg-[linear-gradient(180deg,#0A0A0A_0%,rgba(255,255,255,0.01)_2411.5%)] px-5 lg:px-0">
 			<div className="container mx-auto py-16">
 				<div className="flex justify-center pb-8 ">
 					<div className={`${martianMono.className} flex flex-col items-center`}>
@@ -90,26 +87,28 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 							<span className="text-[#53C1DE]">export</span> function <span className="text-[#F5BD4F]">Contact</span>(){' '}
 							{'{'}
 						</p>
-						<h3 className="font-regular text-md lg:text-2xl">
+						<p aria-hidden="true" className="font-regular text-md lg:text-2xl">
 							return (<span className="text-green-400">Contact Form</span>){'}'}
-						</h3>
+						</p>
 					</div>
 				</div>
 				<div className="flex flex-col justify-center items-center gap-10 w-auto h-auto lg:p-10 border-dashed border-3 border-[#161616]">
-					<p className="uppercase font-bold text-xl lg:text-4xl">{t('title')}</p>
+					<h2 id="contact-heading" className="uppercase font-bold text-xl lg:text-4xl">
+						{t('title')}
+					</h2>
 
 					<div className="w-auto h-auto flex justify-between lg:justify-center items-center lg:gap-6">
 						<Avatar>
-							<AvatarImage src="/assets/contact_avatar.svg" className="w-16 lg:w-20 h-auto" />
+							<AvatarImage src="/assets/contact_avatar.svg" alt="" className="w-16 lg:w-20 h-auto" />
 							<AvatarFallback>matrox.dev</AvatarFallback>
 						</Avatar>
 						<p className="lg:text-center font-light text-xs lg:text-md lg:border-2 rounded-lg border-[#5A5A5A] p-4">
-							{/* Need help?{' '}
-							<span className="lg:hidden">
-								<br />
-							</span>{' '} */}
 							{t('description')} <br />
-							<span className="font-semibold block lg:inline-block mt-2">mateusz.kozera@matrox.dev</span>
+							<a
+								href={`mailto:${AUTHOR.email}`}
+								className="font-semibold block lg:inline-block mt-2 underline-offset-4 hover:text-green-400 hover:underline transition-colors duration-200">
+								{AUTHOR.email}
+							</a>
 						</p>
 					</div>
 
@@ -126,10 +125,11 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 								<input
 									id="name"
 									type="text"
-									placeholder="Your name"
+									placeholder={t('namePlaceholder')}
+									autoComplete="name"
 									{...register('name')}
 									aria-invalid={!!errors.name}
-									className="font-light text-sm border-[0.5px] border-[#8D8D8D] rounded-sm py-4 px-4 bg-[#343333] outline-none focus:border-blue-400/40 transition-colors duration-200"
+									className="font-light text-sm border-[0.5px] border-[#8D8D8D] rounded-sm py-4 px-4 bg-[#343333] outline-none focus:border-[#53C1DE] transition-colors duration-200"
 								/>
 								{errors.name && <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>}
 							</div>
@@ -143,9 +143,10 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 									id="email"
 									type="email"
 									placeholder="you@domain.com"
+									autoComplete="email"
 									{...register('email')}
 									aria-invalid={!!errors.email}
-									className="font-light text-sm border-[0.5px] border-[#8D8D8D] rounded-sm py-4 px-4 bg-[#343333] outline-none focus:border-blue-400/40 transition-colors duration-200"
+									className="font-light text-sm border-[0.5px] border-[#8D8D8D] rounded-sm py-4 px-4 bg-[#343333] outline-none focus:border-[#53C1DE] transition-colors duration-200"
 								/>
 								{errors.email && <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>}
 							</div>
@@ -157,20 +158,14 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 								</label>
 								<textarea
 									id="message"
-									placeholder="Your message..."
+									placeholder={t('messagePlaceholder')}
 									{...register('message')}
 									aria-invalid={!!errors.message}
-									className="w-full min-h-44 resize-none text-start font-light text-sm border-[0.5px] border-[#8D8D8D] rounded-sm py-3 px-4 bg-[#343333] outline-none focus:border-blue-400/40 transition-colors duration-200 leading-relaxed placeholder:text-[#8D8D8D]"
+									className="w-full min-h-44 resize-none text-start font-light text-sm border-[0.5px] border-[#8D8D8D] rounded-sm py-3 px-4 bg-[#343333] outline-none focus:border-[#53C1DE] transition-colors duration-200 leading-relaxed placeholder:text-[#8D8D8D]"
 								/>
 								{errors.message && <p className="text-red-400 text-xs mt-1">{errors.message.message}</p>}
 							</div>
 						</div>
-						{/* <button
-							type="submit"
-							disabled={pending}
-							className="bg-green-400 text-black py-4 px-8 rounded-2xl cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed">
-							{pending ? 'Sending…' : 'Send message'}
-						</button> */}
 						<ReCAPTCHA
 							ref={recaptchaRef}
 							sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
@@ -183,13 +178,13 @@ export default function ContactForm({ onSuccess, onError }: ContactFormProps) {
 						<button
 							type="submit"
 							disabled={pending || !captchaToken} // no token
-							className="bg-green-400 text-black py-4 px-8 rounded-2xl cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed">
-							{pending ? 'Sending…' : 'Send message'}
+							className="bg-green-400 text-black font-semibold py-4 px-8 rounded-2xl cursor-pointer transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_24px_0_rgba(74,222,128,0.35)] active:translate-y-0 active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none">
+							{pending ? t('sending') : t('button')}
 						</button>
 						{status && <p className={`text-sm ${status.ok ? 'text-green-400' : 'text-red-400'}`}>{status.msg}</p>}
 					</form>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }

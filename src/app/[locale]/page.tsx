@@ -1,82 +1,87 @@
-'use client'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
-import { useState } from 'react'
-import Script from 'next/script'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import Home from '@/components/home'
+import { AUTHOR, HTML_LANG, SITE_NAME, SITE_URL } from '@/lib/site'
 
-import { Nav } from '@/components/navbar'
-import Hero from '@/components/hero'
-import About from '@/components/about'
-import Expirience from '@/components/expirience'
-import ContactForm from '@/components/contact-form'
-import Skills from '@/components/skills'
-import Portfolio from '@/components/portfolio'
-import { portfolio } from '@/data/portfolio'
+type Props = {
+	params: Promise<{ locale: string }>
+}
 
-import TerminalWindow from '@/components/ui/succesTerminal'
+export default async function Page({ params }: Props) {
+	const { locale } = await params
+	setRequestLocale(locale)
+	const t = await getTranslations({ locale, namespace: 'Metadata' })
 
-export default function Home() {
-	const [showTerminal, setShowTerminal] = useState(false)
+	const pageUrl = `${SITE_URL}/${locale}`
 
-	const handleCloseTerminal = () => {
-		setShowTerminal(false)
+	const pwr = {
+		'@type': 'CollegeOrUniversity',
+		name: 'Politechnika Wrocławska',
+		alternateName: ['Wrocław University of Science and Technology', 'PWr'],
+		url: 'https://pwr.edu.pl',
 	}
 
-	const handleSuccess = () => {
-		setShowTerminal(true)
-	}
-
-	const person = {
+	const jsonLd = {
 		'@context': 'https://schema.org',
-		'@type': 'Person',
-		name: 'Mateusz Kozera',
-		url: 'https://matrox.dev',
-		sameAs: ['https://www.linkedin.com/in/mateusz-kozera-a30566313/', 'https://github.com/matroxok'],
-		jobTitle: 'Web Developer, HPC Worker, IT Student',
-		worksFor: { '@type': 'Organization', name: 'matrox.dev' },
-	}
-
-	const webSite = {
-		'@context': 'https://schema.org',
-		'@type': 'WebSite',
-		name: 'matrox.dev',
-		url: 'https://matrox.dev',
-		potentialAction: {
-			'@type': 'SearchAction',
-			target: 'https://matrox.dev/search?q={query}',
-			'query-input': 'required name=query',
-		},
+		'@graph': [
+			{
+				'@type': 'Person',
+				'@id': `${SITE_URL}/#person`,
+				name: AUTHOR.name,
+				alternateName: AUTHOR.alternateName,
+				url: SITE_URL,
+				image: `${SITE_URL}/assets/mk_photo.jpeg`,
+				email: `mailto:${AUTHOR.email}`,
+				jobTitle: 'Full Stack Web Developer & UI/UX Designer',
+				description: t('description'),
+				address: {
+					'@type': 'PostalAddress',
+					addressLocality: 'Wrocław',
+					addressCountry: 'PL',
+				},
+				alumniOf: pwr,
+				knowsAbout: [
+					'Web Development',
+					'Next.js',
+					'React',
+					'TypeScript',
+					'UI/UX Design',
+					'High Performance Computing',
+					'HPC',
+					'Docker',
+					'WCSS',
+					'Wrocławskie Centrum Sieciowo-Superkomputerowe',
+				],
+				sameAs: [AUTHOR.linkedin, AUTHOR.github],
+			},
+			{
+				'@type': 'WebSite',
+				'@id': `${SITE_URL}/#website`,
+				name: SITE_NAME,
+				url: SITE_URL,
+				inLanguage: Object.values(HTML_LANG),
+				publisher: { '@id': `${SITE_URL}/#person` },
+			},
+			{
+				'@type': 'ProfilePage',
+				'@id': `${pageUrl}#profile`,
+				url: pageUrl,
+				name: t('title'),
+				description: t('description'),
+				inLanguage: HTML_LANG[locale] ?? locale,
+				isPartOf: { '@id': `${SITE_URL}/#website` },
+				mainEntity: { '@id': `${SITE_URL}/#person` },
+			},
+		],
 	}
 
 	return (
 		<>
-			{showTerminal && (
-				<div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-xs bg-black/80 transition-opacity duration-300">
-					<TerminalWindow onClose={handleCloseTerminal} />
-				</div>
-			)}
-			<div className="text-white w-full h-full">
-				<nav className="sticky mt-5 top-0 z-100">
-					<Nav></Nav>
-				</nav>
-				<main>
-					<Hero></Hero>
-					<About></About>
-					<div className="w-full border-t border-dotted border-[#D4D4D4]"></div>
-					<Expirience></Expirience>
-					<Skills></Skills>
-					<Portfolio data={portfolio}></Portfolio>
-					<ContactForm onSuccess={handleSuccess}></ContactForm>
-				</main>
-				<footer></footer>
-				<SpeedInsights />
-			</div>
-			<Script id="ld-person" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />
-			<Script
-				id="ld-website"
+			<script
 				type="application/ld+json"
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(webSite) }}
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
 			/>
+			<Home />
 		</>
 	)
 }
