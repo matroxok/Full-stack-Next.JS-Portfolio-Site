@@ -1,5 +1,3 @@
-'use client'
-
 export interface PortfolioItem {
 	items: {
 		id?: string
@@ -31,7 +29,7 @@ export const portfolio: PortfolioItem[] = [
 			{
 				tech: 'Next.js PostgreSQL TailwindCSS IIIF-Viewer CI/CD Prisma Docker NextAuth goofys REST-API MinIO-S3 npm',
 				id: 'AtlasScans',
-				title: 'Atlas of Medical Scans',
+				title: 'Mikroskop w telefonie - Wydział Medyczny Politechnika Wrocławska',
 				description:
 					'Atlas of Medical Scans for the Faculty of Medicine of Wrocław University of Science and Technology.',
 				image: '/assets/projects/matrox_dev_atlas_skanow.png',
@@ -47,18 +45,6 @@ export const portfolio: PortfolioItem[] = [
 				title: 'matrox.dev',
 				description: 'Personal landing page',
 				image: '/assets/projects/matrox_dev_matroxdev.png',
-				href: 'https://matrox.dev',
-			},
-		],
-	},
-	{
-		items: [
-			{
-				tech: 'Next.js Stripe Node Docker MongoDB TailwindCSS',
-				id: 'HealthyBox',
-				title: 'HealthyBox.be',
-				description: 'Food Order Full-Stack App',
-				image: '/assets/projects/matrox_dev_healthybox.png',
 				href: 'https://matrox.dev',
 			},
 		],

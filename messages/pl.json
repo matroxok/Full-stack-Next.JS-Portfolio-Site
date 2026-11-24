@@ -30,9 +30,9 @@
 		"photoPlace": "09.11.2024, Warszawa"
 	},
 	"Experience": {
-		"title": "Doświadczenie",
 		"1": "W branży IT pracuję od ponad <highlight>{years} lat</highlight>, zdobywając doświadczenie w projektach z zakresu High Performance Computing (HPC) i web developmentu, a także w obszarze UI/UX designu i konteneryzacji.",
 		"2": "Jestem w trakcie studiów inżynierskich na <highlight>Politechnice Wrocławskiej</highlight>, gdzie rozwijam swoje umiejętności i poszerzam wiedzę z zakresu informatyki. Więcej o mojej ścieżce zawodowej znajdziesz na moim profilu LinkedIn.",
+		"title": "Doświadczenie",
 		"yearsLabel": "lat w IT",
 		"LinkedinButton": "Szczegółowe informacje na moim"
 	},
@@ -69,5 +69,51 @@
 	"Footer": {
 		"rights": "Wszelkie prawa zastrzeżone.",
 		"backToTop": "Do góry"
+	},
+	"PortfolioPages": {
+		"title": "Portfolio",
+		"back": "Wróć",
+		"cta": "Zobacz",
+		"projects": "{count, plural, =0 {wkrótce} one {# projekt} few {# projekty} many {# projektów} other {# projektu}}",
+		"ui": {
+			"tileTitle": "UI/UX Design",
+			"tileDescription": "Sprawdź, jak wyglądają moje pomysły, zanim wejdą w życie.",
+			"title": "UI / UX Design",
+			"description": "Projektuję wszystko, czego potrzebujesz. iOS? Android? Strona internetowa? :)",
+			"metaTitle": "Portfolio UI/UX",
+			"metaDescription": "Projekty UI/UX autorstwa Mateusza Kozery. Sprawdź, jak wyglądają moje pomysły, zanim wejdą w życie.",
+			"open": "Otwórz podgląd",
+			"close": "Zamknij",
+			"empty": "Projekty pojawią się tu wkrótce.",
+			"openExternal": "Zobacz więcej",
+			"prev": "Poprzedni ekran",
+			"next": "Następny ekran",
+			"screens": "{count, plural, one {# ekran} few {# ekrany} other {# ekranów}}",
+			"items": {
+				"e-science-wcss": {
+					"description": "Całkowicie nowy portal usługowy E-Science.pl – platforma usług oferowanych przez Wrocławskie Centrum Sieciowo-Superkomputerowe.",
+					"screens": {
+						"home": "Strona główna"
+					}
+				},
+				"healthybox": {
+					"description": "Strona główna projektu HealthyBox – polskiej kuchni działającej na terenie Belgii.",
+					"screens": {
+						"home": "Strona główna",
+						"offer": "Oferta",
+						"fullOffer": "Pełna oferta",
+						"prices": "Cennik"
+					}
+				}
+			}
+		},
+		"deployments": {
+			"tileTitle": "Wdrożenia produkcyjne",
+			"tileDescription": "Działające aplikacje i strony na produkcji: SaaS, aplikacje mobilne, landing page'e i systemy dla prawdziwych klientów.",
+			"title": "Wdrożenia",
+			"description": "Aplikacje i strony, które działają na produkcji.",
+			"metaTitle": "Wdrożone projekty",
+			"metaDescription": "Wdrożone aplikacje webowe, SaaS i strony internetowe autorstwa Mateusza Kozery."
+		}
 	}
 }

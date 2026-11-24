@@ -9,9 +9,10 @@ import About from '@/components/about'
 import Expirience from '@/components/expirience'
 import ContactForm from '@/components/contact-form'
 import Skills from '@/components/skills'
-import Portfolio from '@/components/portfolio'
+import PortfolioTiles from '@/components/portfolio-tiles'
 import Footer from '@/components/footer'
 import { portfolio } from '@/data/portfolio'
+import { designs } from '@/data/designs'
 
 import TerminalWindow from '@/components/ui/succesTerminal'
 
@@ -43,7 +44,10 @@ export default function Home() {
 					<div className="w-full border-t border-dotted border-[#D4D4D4]"></div>
 					<Expirience></Expirience>
 					<Skills></Skills>
-					<Portfolio data={portfolio}></Portfolio>
+					<PortfolioTiles
+						uiCount={designs.length}
+						deploymentsCount={portfolio.flatMap(group => group.items).length}
+					/>
 					<ContactForm onSuccess={handleSuccess}></ContactForm>
 				</main>
 				<Footer />

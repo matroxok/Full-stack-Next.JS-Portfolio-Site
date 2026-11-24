@@ -30,9 +30,9 @@
 		"photoPlace": "09.11.2024, Warschau"
 	},
 	"Experience": {
-		"title": "Erfahrung",
 		"1": "Ich arbeite seit über <highlight>{years} Jahren</highlight> in der IT-Branche und habe Erfahrung in Projekten aus den Bereichen High Performance Computing (HPC), Webentwicklung und UI/UX-Design gesammelt.",
 		"2": "Derzeit studiere ich an der <highlight>Technischen Universität Wrocław</highlight> (Politechnika Wrocławska), wo ich mein Wissen in Informatik und modernen Technologien weiter ausbaue. Weitere Details zu meinem beruflichen Werdegang findest du auf meinem LinkedIn-Profil.",
+		"title": "Erfahrung",
 		"yearsLabel": "Jahre in der IT",
 		"LinkedinButton": "Detaillierte Informationen auf meinem"
 	},
@@ -69,5 +69,51 @@
 	"Footer": {
 		"rights": "Alle Rechte vorbehalten.",
 		"backToTop": "Nach oben"
+	},
+	"PortfolioPages": {
+		"title": "Portfolio",
+		"back": "Zurück",
+		"cta": "Ansehen",
+		"projects": "{count, plural, =0 {bald} one {# Projekt} other {# Projekte}}",
+		"ui": {
+			"tileTitle": "UI/UX Design",
+			"tileDescription": "So sehen meine Ideen aus, bevor sie Wirklichkeit werden.",
+			"title": "UI / UX Design",
+			"description": "Ich designe alles, was du brauchst. iOS? Android? Eine Website? :)",
+			"metaTitle": "UI / UX Portfolio",
+			"metaDescription": "UI/UX-Designs von Mateusz Kozera. So sehen meine Ideen aus, bevor sie Wirklichkeit werden.",
+			"open": "Vorschau öffnen",
+			"close": "Schließen",
+			"empty": "Projekte erscheinen hier bald.",
+			"openExternal": "Mehr ansehen",
+			"prev": "Vorheriger Screen",
+			"next": "Nächster Screen",
+			"screens": "{count, plural, one {# Screen} other {# Screens}}",
+			"items": {
+				"e-science-wcss": {
+					"description": "Ein komplett neues Serviceportal, E-Science.pl – eine Plattform für die Dienste des Wrocławer Netzwerk- und Supercomputing-Zentrums (WCSS).",
+					"screens": {
+						"home": "Startseite"
+					}
+				},
+				"healthybox": {
+					"description": "Startseite für HealthyBox – eine polnische Küche mit Sitz in Belgien.",
+					"screens": {
+						"home": "Startseite",
+						"offer": "Angebot",
+						"fullOffer": "Gesamtes Angebot",
+						"prices": "Preise"
+					}
+				}
+			}
+		},
+		"deployments": {
+			"tileTitle": "Produktiv-Deployments",
+			"tileDescription": "Live-Apps und Websites in Produktion: SaaS-Produkte, mobile Apps, Landingpages und Systeme für echte Kunden.",
+			"title": "Deployments",
+			"description": "Apps und Websites, die in Produktion laufen.",
+			"metaTitle": "Veröffentlichte Projekte",
+			"metaDescription": "Veröffentlichte Web-Apps, SaaS-Produkte und Websites von Mateusz Kozera."
+		}
 	}
 }
