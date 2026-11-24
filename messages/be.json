@@ -30,9 +30,9 @@
 		"photoPlace": "09.11.2024, Warschau"
 	},
 	"Experience": {
-		"title": "Ervaring",
 		"1": "Ik werk al meer dan <highlight>{years} jaar</highlight> in de IT-sector en heb ervaring opgedaan met projecten op het gebied van High Performance Computing (HPC), webontwikkeling en UI/UX-design.",
 		"2": "Momenteel studeer ik aan de <highlight>Technische Universiteit van Wrocław</highlight> (Politechnika Wrocławska), waar ik mijn kennis van informatica en moderne technologieën verder uitbreid. Meer details over mijn professionele achtergrond vind je op mijn LinkedIn-profiel.",
+		"title": "Ervaring",
 		"yearsLabel": "jaar in IT",
 		"LinkedinButton": "Gedetailleerde informatie op mijn"
 	},
@@ -69,5 +69,51 @@
 	"Footer": {
 		"rights": "Alle rechten voorbehouden.",
 		"backToTop": "Terug naar boven"
+	},
+	"PortfolioPages": {
+		"title": "Portfolio",
+		"back": "Terug",
+		"cta": "Bekijk",
+		"projects": "{count, plural, =0 {binnenkort} one {# project} other {# projecten}}",
+		"ui": {
+			"tileTitle": "UI/UX Design",
+			"tileDescription": "Bekijk hoe mijn ideeën eruitzien voordat ze werkelijkheid worden.",
+			"title": "UI / UX Design",
+			"description": "Ik ontwerp alles wat je nodig hebt. iOS? Android? Een website? :)",
+			"metaTitle": "UI / UX Portfolio",
+			"metaDescription": "UI/UX-ontwerpen van Mateusz Kozera. Bekijk hoe mijn ideeën eruitzien voordat ze werkelijkheid worden.",
+			"open": "Preview openen",
+			"close": "Sluiten",
+			"empty": "Projecten verschijnen hier binnenkort.",
+			"openExternal": "Meer bekijken",
+			"prev": "Vorig scherm",
+			"next": "Volgend scherm",
+			"screens": "{count, plural, one {# scherm} other {# schermen}}",
+			"items": {
+				"e-science-wcss": {
+					"description": "Een volledig nieuw serviceportaal, E-Science.pl – een platform voor de diensten van het Wrocław Centrum voor Netwerken en Supercomputing (WCSS).",
+					"screens": {
+						"home": "Startpagina"
+					}
+				},
+				"healthybox": {
+					"description": "Startpagina voor HealthyBox – een Poolse keuken actief in België.",
+					"screens": {
+						"home": "Startpagina",
+						"offer": "Aanbod",
+						"fullOffer": "Volledig aanbod",
+						"prices": "Prijzen"
+					}
+				}
+			}
+		},
+		"deployments": {
+			"tileTitle": "Productie-deployments",
+			"tileDescription": "Live apps en websites in productie: SaaS-producten, mobiele apps, landingspagina's en systemen voor echte klanten.",
+			"title": "Deployments",
+			"description": "Apps en websites die in productie draaien.",
+			"metaTitle": "Gepubliceerde projecten",
+			"metaDescription": "Gepubliceerde webapps, SaaS-producten en websites van Mateusz Kozera."
+		}
 	}
 }

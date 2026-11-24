@@ -30,9 +30,9 @@
 		"photoPlace": "09.11.2024, Warsaw"
 	},
 	"Experience": {
-		"title": "Experience",
 		"1": "I've been working in the IT industry for over <highlight>{years} years</highlight>, gaining experience in projects related to High Performance Computing (HPC), web development and UI/UX design.",
 		"2": "I'm currently studying at <highlight>Wrocław University of Science and Technology</highlight>, where I continue to expand my knowledge of computer science and modern technologies. You can find more details about my professional background on my LinkedIn profile.",
+		"title": "Experience",
 		"yearsLabel": "years in IT",
 		"LinkedinButton": "Detailed information on my"
 	},
@@ -69,5 +69,51 @@
 	"Footer": {
 		"rights": "All rights reserved.",
 		"backToTop": "Back to top"
+	},
+	"PortfolioPages": {
+		"title": "Portfolio",
+		"back": "Back",
+		"cta": "Explore",
+		"projects": "{count, plural, =0 {coming soon} one {# project} other {# projects}}",
+		"ui": {
+			"tileTitle": "UI/UX Design",
+			"tileDescription": "See what my ideas look like before they come to life.",
+			"title": "UI / UX Design",
+			"description": "I design whatever you need. iOS? Android? A website? :)",
+			"metaTitle": "UI / UX Portfolio",
+			"metaDescription": "UI/UX designs by Mateusz Kozera. See what my ideas look like before they come to life.",
+			"open": "Open preview",
+			"close": "Close",
+			"empty": "Projects will appear here soon.",
+			"openExternal": "View more",
+			"prev": "Previous screen",
+			"next": "Next screen",
+			"screens": "{count, plural, one {# screen} other {# screens}}",
+			"items": {
+				"e-science-wcss": {
+					"description": "A brand-new service portal, E-Science.pl – a platform for the services offered by the Wrocław Centre for Networking and Supercomputing.",
+					"screens": {
+						"home": "Home page"
+					}
+				},
+				"healthybox": {
+					"description": "Home page for HealthyBox – a Polish kitchen operating in Belgium.",
+					"screens": {
+						"home": "Home page",
+						"offer": "Offer",
+						"fullOffer": "Full offer",
+						"prices": "Prices"
+					}
+				}
+			}
+		},
+		"deployments": {
+			"tileTitle": "Production deployments",
+			"tileDescription": "Live apps and websites in production: SaaS products, mobile apps, landing pages and systems for real clients.",
+			"title": "Deployments",
+			"description": "Apps and websites running in production.",
+			"metaTitle": "Deployed projects",
+			"metaDescription": "Deployed web apps, SaaS products and websites by Mateusz Kozera."
+		}
 	}
 }

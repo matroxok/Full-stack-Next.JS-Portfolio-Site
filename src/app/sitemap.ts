@@ -2,17 +2,25 @@ import type { MetadataRoute } from 'next'
 import { routing } from '@/i18n/routing'
 import { HTML_LANG, SITE_URL } from '@/lib/site'
 
-export default function sitemap(): MetadataRoute.Sitemap {
-	const languages: Record<string, string> = Object.fromEntries(
-		routing.locales.map(l => [HTML_LANG[l] ?? l, `${SITE_URL}/${l}`]),
-	)
-	languages['x-default'] = `${SITE_URL}/${routing.defaultLocale}`
+const PAGES = [
+	{ path: '', priority: 1 },
+	{ path: '/portfolio/ui', priority: 0.8 },
+	{ path: '/portfolio/deployments', priority: 0.8 },
+]
 
-	return routing.locales.map(locale => ({
-		url: `${SITE_URL}/${locale}`,
-		lastModified: new Date(),
-		changeFrequency: 'monthly',
-		priority: locale === routing.defaultLocale ? 1 : 0.9,
-		alternates: { languages },
-	}))
+export default function sitemap(): MetadataRoute.Sitemap {
+	return PAGES.flatMap(({ path, priority }) => {
+		const languages: Record<string, string> = Object.fromEntries(
+			routing.locales.map(l => [HTML_LANG[l] ?? l, `${SITE_URL}/${l}${path}`]),
+		)
+		languages['x-default'] = `${SITE_URL}/${routing.defaultLocale}${path}`
+
+		return routing.locales.map(locale => ({
+			url: `${SITE_URL}/${locale}${path}`,
+			lastModified: new Date(),
+			changeFrequency: 'monthly' as const,
+			priority: locale === routing.defaultLocale ? priority : priority - 0.1,
+			alternates: { languages },
+		}))
+	})
 }

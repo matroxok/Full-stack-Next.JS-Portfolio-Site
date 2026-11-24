@@ -2,8 +2,8 @@ export const SITE_URL = 'https://matrox.dev'
 export const SITE_NAME = 'matrox.dev'
 
 export const AUTHOR = {
-	name: 'Mateusz Kozera',
-	alternateName: 'matrox',
+	name: 'matrox.dev | Mateusz Kozera',
+	alternateName: 'matroxok',
 	email: 'mateusz.kozera@matrox.dev',
 	linkedin: 'https://www.linkedin.com/in/mateusz-kozera-a30566313/',
 	github: 'https://github.com/matroxok',
